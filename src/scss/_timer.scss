@@ -1,0 +1,72 @@
+.timer-wrapper {
+    @extend %flex-column;
+    @extend %margin-auto;
+    @extend %user-select;
+
+    @include w-h(70%);
+    max-width: 1024px;
+
+    padding: 90px 10px 60px;
+
+    border-bottom: 1.5px solid $text;
+    border-top: 1.5px solid $text;
+}
+
+.gradient-wrapper {
+    align-self: center;
+    box-sizing: content-box;
+
+    @include w-h(300px, 300px);
+    @include border(0px, 50%);
+    @include gradient($grad-timer1, $grad-timer2);
+
+    padding: 5px;
+}
+
+.timer {
+    @extend %flex-column;
+    justify-content: center;
+    align-self: center;
+
+    @include w-h(300px, 300px);
+    @include border(0px, 50%);
+    padding: 10px;
+
+    font-family: 'Roboto Mono', monospace;
+
+    cursor: pointer;
+
+    &__time {
+        @extend %margin-auto;
+        padding-bottom: 10px;
+    
+        font-size: 5rem;
+    }
+
+    &__control {
+        @extend %margin-auto;
+    
+        font-size: 1.8rem;
+        color: $text-info;
+    }
+}
+
+.break-btn {
+    align-self: center;
+    margin-top: 50px;
+
+    &__short,
+    &__long {
+        @include w-h(160px);
+        @include border(2px, 30px);
+
+        margin: 10px 20px;
+        padding: 5px 15px;
+    
+        font-size: 2rem;
+
+        color: $text-info;
+    
+        cursor: pointer;
+    }
+}

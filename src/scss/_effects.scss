@@ -1,0 +1,31 @@
+.gradient-wrapper {
+    transition: .25s ease-in;
+}
+
+.gradient-wrapper:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px $shadow;
+}
+
+.timer:hover .focus,
+.cancel:hover {
+    color: $text-hover;
+}
+
+.break-btn__short,
+.break-btn__long {
+    transition: .25s ease-in;
+}
+
+.break-btn__short:hover,
+.break-btn__long:hover {
+    transform: scale(1.02);
+
+    color: $text;
+    border-color: $border-hover;
+    box-shadow: 0 0 10px $shadow;
+}
+
+.footer__link:hover {
+    color: $text-hover;
+}
