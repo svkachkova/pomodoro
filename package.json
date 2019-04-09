@@ -1,0 +1,21 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "Pomodoro timer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/scss:src",
+    "tsc": "tsc -w src/ts/timer.ts src/ts/main.ts -t ES2015 -outFile src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svkachkova/Pomodoro.git"
+  },
+  "author": "Svetlana Kachkova sv.kachkova@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svkachkova/Pomodoro/issues"
+  },
+  "homepage": "https://github.com/svkachkova/Pomodoro#readme"
+}
