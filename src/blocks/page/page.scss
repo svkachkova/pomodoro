@@ -25,7 +25,10 @@
 
     &__task-list {
         @extend %margin-auto;
+        padding: 0 50px;
     }
     
-    &__footer {}
+    &__footer {
+        padding: 50px 10px;
+    }
 }

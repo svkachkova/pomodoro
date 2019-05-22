@@ -11,7 +11,7 @@
 
     cursor: pointer;
 
-    %__border {
+    &__border {
         align-self: center;
         box-sizing: content-box;
     
@@ -36,7 +36,7 @@
         color: $text-info;
     }
 
-    &__break-button {
+    &__break-btn {
         align-self: center;
         margin-top: 50px;
     }

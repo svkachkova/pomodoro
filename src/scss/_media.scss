@@ -10,36 +10,34 @@
         }
     }
 
-    .timer-wrapper {
+    .page__timer {
         @include w-h(100%);
         padding: 50px 10px 30px;
     }
 
-    .gradient-wrapper {
-        @include w-h(250px, 250px);
-    }
-
     .timer {
         @include w-h(250px, 250px);
+        &__border {
+            @include w-h(250px, 250px);
+        }
         &__time {
             font-size: 5rem;
         }
         &__control {
             font-size: 1.6rem;
         }
+        &__break-btn {
+            display: flex;
+            flex-flow: column wrap;
+            margin-top: 30px;
+        }
     }
 
-    .break-btn {
-        display: flex;
-        flex-flow: column wrap;
-        margin-top: 30px;
-        
-        &__short,
-        &__long {
-            @include w-h(150px);
-            margin: 10px 0;
-            font-size: 1.8rem;
-        }
+    .break-btn__short,
+    .break-btn__long {
+        @include w-h(150px);
+        margin: 10px 0;
+        font-size: 1.8rem;
     }
 
     .task-list {

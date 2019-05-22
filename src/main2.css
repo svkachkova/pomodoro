@@ -30,6 +30,13 @@
   border-bottom: 1.5px solid #eee;
   border-top: 1.5px solid #eee;
 }
+.page__task-list {
+  padding: 0 50px;
+}
+.page__footer {
+  padding: 50px 10px;
+}
+
 .header {
   width: 100%;
   height: auto;
@@ -53,6 +60,19 @@
   font-family: "Roboto Mono", monospace;
   cursor: pointer;
 }
+.timer__border {
+  align-self: center;
+  box-sizing: content-box;
+  width: 300px;
+  height: 300px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #669DFF;
+  border-radius: 50%;
+  background-color: #3993E5;
+  background-image: linear-gradient(60deg, #3993E5 0%, #8373E5 100%);
+  padding: 5px;
+}
 .timer__time {
   padding-bottom: 10px;
   font-size: 5rem;
@@ -61,7 +81,7 @@
   font-size: 1.8rem;
   color: #bbb;
 }
-.timer__break-button {
+.timer__break-btn {
   align-self: center;
   margin-top: 50px;
 }
@@ -84,7 +104,6 @@
   width: 70%;
   height: auto;
   max-width: 1024px;
-  padding: 0 50px;
   text-align: start;
 }
 .task-list__title {
@@ -101,7 +120,6 @@
 .footer {
   width: 100%;
   height: auto;
-  padding: 50px 10px;
 }
 .footer__autor {
   font-size: 1.5rem;
@@ -119,18 +137,17 @@
     font-size: 5.2rem;
   }
 
-  .timer-wrapper {
+  .page__timer {
     width: 100%;
     height: auto;
     padding: 50px 10px 30px;
   }
 
-  .gradient-wrapper {
+  .timer {
     width: 250px;
     height: 250px;
   }
-
-  .timer {
+  .timer__border {
     width: 250px;
     height: 250px;
   }
@@ -140,13 +157,14 @@
   .timer__control {
     font-size: 1.6rem;
   }
-
-  .break-btn {
+  .timer__break-btn {
     display: flex;
     flex-flow: column wrap;
     margin-top: 30px;
   }
-  .break-btn__short, .break-btn__long {
+
+  .break-btn__short,
+.break-btn__long {
     width: 150px;
     height: auto;
     margin: 10px 0;
