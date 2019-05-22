@@ -3,8 +3,13 @@
 @import 'variables';
 @import 'mixinTemplate';
 
-@import 'timer';
-@import 'taskList';
+@import '../blocks/page/page';
+@import '../blocks/header/header';
+@import '../blocks/timer/timer';
+@import '../blocks/break-btn/break-btn';
+@import '../blocks/task-list/task-list';
+@import '../blocks/footer/footer';
+
 @import 'effects';
 
 @import 'media';
@@ -21,40 +26,4 @@
 
 html {
     font-size: 12px;
-}
-
-body {
-    @include w-h(100%, 100hv);
-
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-
-    text-align: center;
-    line-height: 1.2;
-}
-
-/* -----header----- */
-.header {
-    @include w-h(100%);
-    padding: 20px 10px;
-
-    &__title {   
-        font-weight: 400;
-        font-size: 6rem;
-    }
-}
-
-/* -----footer----- */
-.footer {
-    @include w-h(100%);
-    padding: 50px 10px;
-
-    &__autor {
-        font-size: 1.5rem;
-        color: $text-info;
-    }
-
-    &__link {
-        text-decoration: none;
-    }
 }

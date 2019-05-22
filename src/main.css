@@ -1,20 +1,28 @@
-.task-list, .timer__control, .timer__time, .timer-wrapper {
+.timer__control, .timer__time, .page__task-list, .page__timer {
   margin: 0 auto;
 }
 
-.timer, .timer-wrapper {
+.timer, .page__timer {
   display: flex;
   flex-flow: column wrap;
 }
 
-.timer-wrapper {
+.page__timer {
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
 
-.timer-wrapper {
+.page {
+  width: 100%;
+  height: 100hv;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.2;
+}
+.page__timer {
   width: 70%;
   height: auto;
   max-width: 1024px;
@@ -22,19 +30,21 @@
   border-bottom: 1.5px solid #eee;
   border-top: 1.5px solid #eee;
 }
+.page__task-list {
+  padding: 0 50px;
+}
+.page__footer {
+  padding: 50px 10px;
+}
 
-.gradient-wrapper {
-  align-self: center;
-  box-sizing: content-box;
-  width: 300px;
-  height: 300px;
-  border-width: 0px;
-  border-style: solid;
-  border-color: #669DFF;
-  border-radius: 50%;
-  background-color: #3993E5;
-  background-image: linear-gradient(60deg, #3993E5 0%, #8373E5 100%);
-  padding: 5px;
+.header {
+  width: 100%;
+  height: auto;
+  padding: 20px 10px;
+}
+.header__title {
+  font-weight: 400;
+  font-size: 6rem;
 }
 
 .timer {
@@ -50,6 +60,19 @@
   font-family: "Roboto Mono", monospace;
   cursor: pointer;
 }
+.timer__border {
+  align-self: center;
+  box-sizing: content-box;
+  width: 300px;
+  height: 300px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #669DFF;
+  border-radius: 50%;
+  background-color: #3993E5;
+  background-image: linear-gradient(60deg, #3993E5 0%, #8373E5 100%);
+  padding: 5px;
+}
 .timer__time {
   padding-bottom: 10px;
   font-size: 5rem;
@@ -58,11 +81,11 @@
   font-size: 1.8rem;
   color: #bbb;
 }
-
-.break-btn {
+.timer__break-btn {
   align-self: center;
   margin-top: 50px;
 }
+
 .break-btn__short, .break-btn__long {
   width: 160px;
   height: auto;
@@ -81,7 +104,6 @@
   width: 70%;
   height: auto;
   max-width: 1024px;
-  padding: 0 50px;
   text-align: start;
 }
 .task-list__title {
@@ -95,11 +117,23 @@
   list-style: circle;
 }
 
-.gradient-wrapper {
+.footer {
+  width: 100%;
+  height: auto;
+}
+.footer__autor {
+  font-size: 1.5rem;
+  color: #bbb;
+}
+.footer__link {
+  text-decoration: none;
+}
+
+.timer__border {
   transition: 0.25s ease-in;
 }
 
-.gradient-wrapper:hover {
+.timer__border:hover {
   transform: scale(1.02);
   box-shadow: 0 0 20px #404050;
 }
@@ -134,18 +168,17 @@
     font-size: 5.2rem;
   }
 
-  .timer-wrapper {
+  .page__timer {
     width: 100%;
     height: auto;
     padding: 50px 10px 30px;
   }
 
-  .gradient-wrapper {
+  .timer {
     width: 250px;
     height: 250px;
   }
-
-  .timer {
+  .timer__border {
     width: 250px;
     height: 250px;
   }
@@ -155,13 +188,14 @@
   .timer__control {
     font-size: 1.6rem;
   }
-
-  .break-btn {
+  .timer__break-btn {
     display: flex;
     flex-flow: column wrap;
     margin-top: 30px;
   }
-  .break-btn__short, .break-btn__long {
+
+  .break-btn__short,
+.break-btn__long {
     width: 150px;
     height: auto;
     margin: 10px 0;
@@ -191,40 +225,6 @@
 
 html {
   font-size: 12px;
-}
-
-body {
-  width: 100%;
-  height: 100hv;
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 300;
-  text-align: center;
-  line-height: 1.2;
-}
-
-/* -----header----- */
-.header {
-  width: 100%;
-  height: auto;
-  padding: 20px 10px;
-}
-.header__title {
-  font-weight: 400;
-  font-size: 6rem;
-}
-
-/* -----footer----- */
-.footer {
-  width: 100%;
-  height: auto;
-  padding: 50px 10px;
-}
-.footer__autor {
-  font-size: 1.5rem;
-  color: #bbb;
-}
-.footer__link {
-  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */
