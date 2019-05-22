@@ -1,0 +1,17 @@
+.break-btn {
+    
+    &__short,
+    &__long {
+        @include w-h(160px);
+        @include border(2px, 30px);
+
+        margin: 10px 20px;
+        padding: 5px 15px;
+    
+        font-size: 2rem;
+
+        color: $text-info;
+    
+        cursor: pointer;
+    }
+}

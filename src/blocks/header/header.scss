@@ -1,0 +1,9 @@
+.header {
+    @include w-h(100%);
+    padding: 20px 10px;
+
+    &__title {   
+        font-weight: 400;
+        font-size: 6rem;
+    }
+}

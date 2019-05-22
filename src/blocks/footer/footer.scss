@@ -1,0 +1,13 @@
+.footer {
+    @include w-h(100%);
+    padding: 50px 10px;
+
+    &__autor {
+        font-size: 1.5rem;
+        color: $text-info;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}
