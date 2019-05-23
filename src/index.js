@@ -54,7 +54,6 @@ class Timer {
         this.digitElem.innerHTML = this.prettier(...this.time);
     }
 }
-// tsc -w timer main -t ES2015 -outFile ../index.js
 const timerElem = document.querySelector('.timer');
 const buttonsElem = document.querySelector('.break-btn');
 const timer = new Timer(timerElem);

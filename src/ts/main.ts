@@ -1,5 +1,3 @@
-// tsc -w timer main -t ES2015 -outFile ../index.js
-
 const timerElem: Element = document.querySelector('.timer'); 
 const buttonsElem: Element = document.querySelector('.break-btn');
 
