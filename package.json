@@ -1,0 +1,23 @@
+{
+  "name": "pomodoro",
+  "version": "1.0.0",
+  "description": "a simple pomodoro timer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svkachkova/Pomodoro.git"
+  },
+  "keywords": [
+    "pomodoro",
+    "timer"
+  ],
+  "author": "Svetlana Kachkova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svkachkova/Pomodoro/issues"
+  },
+  "homepage": "https://github.com/svkachkova/Pomodoro#readme"
+}
