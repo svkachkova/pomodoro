@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch src/scss:src",
+    "start": "gulp",
     "tsc": "tsc -w src/ts/timer.ts src/ts/main.ts -t ES2015 -outFile src/index.js"
   },
   "repository": {
@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/svkachkova/Pomodoro#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
   }
 }
