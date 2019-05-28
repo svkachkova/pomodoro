@@ -1,3 +1,5 @@
+import {Timer} from "../blocks/timer/timer";
+
 const timerElem: Element = document.querySelector('.timer'); 
 const buttonsElem: Element = document.querySelector('.timer__break-btn');
 

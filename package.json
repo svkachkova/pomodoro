@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
-    "tsc": "tsc -w src/ts/timer.ts src/ts/main.ts -t ES2015 -outFile src/index.js"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
@@ -23,10 +22,15 @@
   },
   "homepage": "https://github.com/svkachkova/Pomodoro#readme",
   "devDependencies": {
+    "browserify": "^16.2.3",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^5.0.1",
+    "tsify": "^4.0.1",
+    "typescript": "^3.4.5",
+    "vinyl-source-stream": "^2.0.0"
   }
 }

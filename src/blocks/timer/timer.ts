@@ -1,4 +1,4 @@
-class Timer {
+export class Timer {
 
     public isStarted: boolean = false;
 
