@@ -1,4 +1,4 @@
-export default class Timer {
+class Timer {
 
     public isStarted: boolean = false;
 
@@ -22,14 +22,14 @@ export default class Timer {
 
     private controlFocus() {
         this.controlElem.innerHTML = 'focus';
-        this.controlElem.classList.add('focus');
-        this.controlElem.classList.remove('cancel');
+        this.controlElem.classList.add('timer_focus');
+        this.controlElem.classList.remove('timer_cancel');
     }
 
     private controlCancel() {
         this.controlElem.innerHTML = 'cancel';
-        this.controlElem.classList.add('cancel');
-        this.controlElem.classList.remove('focus');
+        this.controlElem.classList.add('timer_cancel');
+        this.controlElem.classList.remove('timer_focus');
     }
 
     private end(): void {

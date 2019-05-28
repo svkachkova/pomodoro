@@ -12,13 +12,13 @@ class Timer {
     }
     controlFocus() {
         this.controlElem.innerHTML = 'focus';
-        this.controlElem.classList.add('focus');
-        this.controlElem.classList.remove('cancel');
+        this.controlElem.classList.add('timer_focus');
+        this.controlElem.classList.remove('timer_cancel');
     }
     controlCancel() {
         this.controlElem.innerHTML = 'cancel';
-        this.controlElem.classList.add('cancel');
-        this.controlElem.classList.remove('focus');
+        this.controlElem.classList.add('timer_cancel');
+        this.controlElem.classList.remove('timer_focus');
     }
     end() {
         clearInterval(this.interval);
@@ -55,12 +55,12 @@ class Timer {
     }
 }
 const timerElem = document.querySelector('.timer');
-const buttonsElem = document.querySelector('.break-btn');
+const buttonsElem = document.querySelector('.timer__break-btn');
 const timer = new Timer(timerElem);
 timerElem.addEventListener('click', (event) => {
     const target = event.target;
     if (timer.isStarted == true) {
-        if (target.matches('.timer__control') && target.classList.contains('cancel')) {
+        if (target.matches('.timer__control') && target.classList.contains('timer_cancel')) {
             timer.cancel();
         }
         return;
@@ -69,10 +69,10 @@ timerElem.addEventListener('click', (event) => {
 });
 buttonsElem.addEventListener('click', (event) => {
     const target = event.target;
-    if (target.matches('.break-btn__short')) {
+    if (target.matches('.break-btn_type_short')) {
         timer.start(5);
     }
-    if (target.matches('.break-btn__long')) {
+    if (target.matches('.break-btn_type_long')) {
         timer.start(15);
     }
 });

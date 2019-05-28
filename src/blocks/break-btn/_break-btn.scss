@@ -1,7 +1,7 @@
 .break-btn {
     
-    &__short,
-    &__long {
+    &_type_short,
+    &_type_long {
         @include w-h(160px);
         @include border(2px, 30px);
 

@@ -7,18 +7,18 @@
     box-shadow: 0 0 20px $shadow;
 }
 
-.timer:hover .focus,
-.cancel:hover {
+.timer:hover .timer_focus,
+.timer_cancel:hover {
     color: $text-hover;
 }
 
-.break-btn__short,
-.break-btn__long {
+.break-btn_type_short,
+.break-btn_type_long {
     transition: .25s ease-in;
 }
 
-.break-btn__short:hover,
-.break-btn__long:hover {
+.break-btn_type_short:hover,
+.break-btn_type_long:hover {
     transform: scale(1.02);
 
     color: $text;
