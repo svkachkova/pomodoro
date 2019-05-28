@@ -1,4 +1,4 @@
-class Timer {
+export default class Timer {
 
     public isStarted: boolean = false;
 
@@ -52,7 +52,7 @@ class Timer {
         const timerName: string= (duration === 25) ? 'Focus' : 'Break';
         document.title = `(${this.time[0]}m) ${timerName}`; 
 
-        this.interval = setInterval(() => {
+        this.interval = <any>setInterval(() => {
 
             if (this.time[1] === 0) {
                 this.time[1] = 59;
