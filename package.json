@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp build"
+    "start": "gulp build",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/svkachkova/Pomodoro#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.5",
     "browserify": "^16.2.3",
     "del": "^4.1.1",
     "gulp": "^4.0.2",

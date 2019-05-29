@@ -6,14 +6,14 @@ const dir = {
 };
 
 const { task, series, parallel, src, dest, watch } = require('gulp');
+const del = require('del');
 const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
-const ts = require("gulp-typescript");
 const browserify = require("browserify");
 const source = require('vinyl-source-stream');
 const tsify = require("tsify");
-const del = require('del');
+const browserSync = require('browser-sync').create();
 
 task('compileStyles', () => {
     return src(dir.src + 'scss/style.scss')
@@ -55,6 +55,13 @@ task('watch', () => {
     watch(dir.src + '*.{html,ico}', series('copyHTML'));
 });
 
-task('build', 
-    series('clean', parallel('compileStyles', 'compileScripts', 'copyHTML'))
-);
+task('serve', () => {
+    browserSync.init({
+		server: dir.build
+	});
+	browserSync.watch(dir.build + '**/*.*').on('change', browserSync.reload);
+});
+
+task('build', series('clean', parallel('compileStyles', 'compileScripts', 'copyHTML')));
+
+task('dev', series('build', parallel('serve', 'watch')));
