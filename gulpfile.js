@@ -49,4 +49,12 @@ task('clean', () => {
     return del(dir.build);
 });
 
-task('default', series('clean', parallel('compileStyles', 'compileScripts', 'copyHTML')));
+task('watch', () => {
+    watch(dir.src + '**/*.scss', series('compileStyles'));
+    watch(dir.src + '**/*.ts', series('compileScripts'));
+    watch(dir.src + '*.{html,ico}', series('copyHTML'));
+});
+
+task('build', 
+    series('clean', parallel('compileStyles', 'compileScripts', 'copyHTML'))
+);
