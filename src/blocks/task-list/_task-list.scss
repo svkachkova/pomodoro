@@ -5,7 +5,7 @@
     // padding: 0 50px;
     text-align: start;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: $screen) {
         @include w-h(100%);
         padding-left: 50px;
         padding-right: 10px;
@@ -17,7 +17,7 @@
         font-weight: 400;
         font-size: 3rem;
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: $screen) {
             font-size: 2.8rem;
         }
     }
@@ -29,7 +29,7 @@
         font-size: 1.8rem;
         list-style: circle;
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: $screen) {
             font-size: 1.6rem; 
         }
     }

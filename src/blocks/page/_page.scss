@@ -22,7 +22,7 @@
         border-bottom: 1.5px solid $text;
         border-top: 1.5px solid $text;
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: $screen) {
             @include w-h(100%);
             padding: 50px 10px 30px;
         }
