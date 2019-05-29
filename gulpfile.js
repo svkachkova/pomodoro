@@ -40,8 +40,13 @@ task('compileScripts', () => {
     .pipe(dest(dir.build + 'js/'));
 });
 
+task('copyHTML', () => {
+    return src(dir.src + '**/*.{html,ico}')
+    .pipe(dest(dir.build));
+});
+
 task('clean', () => {
     return del(dir.build);
 });
 
-task('default', series('clean', parallel('compileStyles', 'compileScripts')));
+task('default', series('clean', parallel('compileStyles', 'compileScripts', 'copyHTML')));
