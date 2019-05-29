@@ -25,8 +25,15 @@
     
         padding: 5px;
 
+        transition: .25s ease-in;
+
         @media screen and (max-width: $screen) {
             @include w-h(250px, 250px);
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px $shadow;
         }
     }
 
@@ -58,4 +65,9 @@
             margin-top: 30px;
         }
     }
+}
+
+.timer:hover .timer_focus,
+.timer_cancel:hover {
+    color: $text-hover;
 }

@@ -14,10 +14,21 @@
     
         cursor: pointer;
 
+        transition: .25s ease-in;
+
         @media screen and (max-width: $screen) {
             @include w-h(150px);
             margin: 10px 0;
             font-size: 1.8rem;
+        }
+
+        &:hover,
+        &:hover {
+            transform: scale(1.02);
+
+            color: $text;
+            border-color: $border-hover;
+            box-shadow: 0 0 10px $shadow;
         }
     }
 }
