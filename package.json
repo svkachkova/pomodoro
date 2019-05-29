@@ -27,12 +27,15 @@
     "browserify": "^16.2.3",
     "del": "^4.1.1",
     "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-typescript": "^5.0.1",
+    "gulp-uglify": "^3.0.2",
     "tsify": "^4.0.1",
     "typescript": "^3.4.5",
+    "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   }
 }

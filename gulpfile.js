@@ -10,9 +10,12 @@ const del = require('del');
 const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
 const browserify = require("browserify");
 const source = require('vinyl-source-stream');
 const tsify = require("tsify");
+const buffer = require('vinyl-buffer');
+const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 
 task('compileStyles', () => {
@@ -25,6 +28,7 @@ task('compileStyles', () => {
     }))
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write('/'))
     .pipe(dest(dir.build + 'css/'));
 });
@@ -37,6 +41,10 @@ task('compileScripts', () => {
     .plugin(tsify, dir.src + "ts/tsconfig.json")
     .bundle()
     .pipe(source('index.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('/'))
     .pipe(dest(dir.build + 'js/'));
 });
 
