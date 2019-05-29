@@ -5,11 +5,21 @@
     // padding: 0 50px;
     text-align: start;
 
+    @media screen and (max-width: 480px) {
+        @include w-h(100%);
+        padding-left: 50px;
+        padding-right: 10px;
+    }
+
     &__title {
         padding: 20px 0;
 
         font-weight: 400;
         font-size: 3rem;
+
+        @media screen and (max-width: 480px) {
+            font-size: 2.8rem;
+        }
     }
 
     &__list {}
@@ -18,5 +28,9 @@
         padding: 5px 0;
         font-size: 1.8rem;
         list-style: circle;
+
+        @media screen and (max-width: 480px) {
+            font-size: 1.6rem; 
+        }
     }
 }

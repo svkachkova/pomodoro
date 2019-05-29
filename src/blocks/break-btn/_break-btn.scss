@@ -13,5 +13,11 @@
         color: $text-info;
     
         cursor: pointer;
+
+        @media screen and (max-width: 480px) {
+            @include w-h(150px);
+            margin: 10px 0;
+            font-size: 1.8rem;
+        }
     }
 }

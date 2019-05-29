@@ -11,6 +11,10 @@
 
     cursor: pointer;
 
+    @media screen and (max-width: 480px) {
+        @include w-h(250px, 250px);
+    }
+
     &__border {
         align-self: center;
         box-sizing: content-box;
@@ -20,6 +24,10 @@
         @include gradient($grad-timer1, $grad-timer2);
     
         padding: 5px;
+
+        @media screen and (max-width: 480px) {
+            @include w-h(250px, 250px);
+        }
     }
 
     &__time {
@@ -34,12 +42,20 @@
     
         font-size: 1.8rem;
         color: $text-info;
+
+        @media screen and (max-width: 480px) {
+            font-size: 1.6rem;
+        }
     }
 
     &__break-btn {
         align-self: center;
         margin-top: 50px;
+
+        @media screen and (max-width: 480px) {
+            display: flex;
+            flex-flow: column wrap;
+            margin-top: 30px;
+        }
     }
 }
-
-
