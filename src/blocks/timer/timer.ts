@@ -1,4 +1,4 @@
-class Timer {
+export class Timer {
 
     public isStarted: boolean = false;
 
@@ -22,14 +22,14 @@ class Timer {
 
     private controlFocus() {
         this.controlElem.innerHTML = 'focus';
-        this.controlElem.classList.add('focus');
-        this.controlElem.classList.remove('cancel');
+        this.controlElem.classList.add('timer_focus');
+        this.controlElem.classList.remove('timer_cancel');
     }
 
     private controlCancel() {
         this.controlElem.innerHTML = 'cancel';
-        this.controlElem.classList.add('cancel');
-        this.controlElem.classList.remove('focus');
+        this.controlElem.classList.add('timer_cancel');
+        this.controlElem.classList.remove('timer_focus');
     }
 
     private end(): void {
@@ -52,7 +52,7 @@ class Timer {
         const timerName: string= (duration === 25) ? 'Focus' : 'Break';
         document.title = `(${this.time[0]}m) ${timerName}`; 
 
-        this.interval = setInterval(() => {
+        this.interval = <any>setInterval(() => {
 
             if (this.time[1] === 0) {
                 this.time[1] = 59;

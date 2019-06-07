@@ -1,0 +1,17 @@
+.header {
+    @include w-h(100%);
+    padding: 20px 10px;
+
+    @media screen and (max-width: $screen) {
+        padding: 10px;
+    }
+
+    &__title {   
+        font-weight: 400;
+        font-size: 6rem;
+
+        @media screen and (max-width: $screen) {
+            font-size: 5.2rem;
+        }
+    }
+}

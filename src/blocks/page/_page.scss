@@ -1,0 +1,39 @@
+.page {
+    @include w-h(100%, 100hv);
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+
+    text-align: center;
+    line-height: 1.2;
+
+    &__header {}
+
+    &__timer {
+        @extend %flex-column;
+        @extend %margin-auto;
+        @extend %user-select;
+    
+        @include w-h(70%);
+        max-width: 1024px;
+    
+        padding: 90px 10px 60px;
+    
+        border-bottom: 1.5px solid $text;
+        border-top: 1.5px solid $text;
+
+        @media screen and (max-width: $screen) {
+            @include w-h(100%);
+            padding: 50px 10px 30px;
+        }
+    }
+
+    &__task-list {
+        @extend %margin-auto;
+        padding: 0 50px;
+    }
+    
+    &__footer {
+        padding: 50px 10px;
+    }
+}

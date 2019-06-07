@@ -1,0 +1,16 @@
+.footer {
+    @include w-h(100%);
+
+    &__autor {
+        font-size: 1.5rem;
+        color: $text-info;
+    }
+
+    &__link {
+        text-decoration: none;
+
+        &:hover {
+            color: $text-hover;
+        }
+    }
+}

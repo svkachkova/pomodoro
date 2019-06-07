@@ -1,0 +1,36 @@
+.task-list {
+    @include w-h(70%);
+    max-width: 1024px;
+
+    // padding: 0 50px;
+    text-align: start;
+
+    @media screen and (max-width: $screen) {
+        @include w-h(100%);
+        padding-left: 50px;
+        padding-right: 10px;
+    }
+
+    &__title {
+        padding: 20px 0;
+
+        font-weight: 400;
+        font-size: 3rem;
+
+        @media screen and (max-width: $screen) {
+            font-size: 2.8rem;
+        }
+    }
+
+    &__list {}
+
+    &__task {
+        padding: 5px 0;
+        font-size: 1.8rem;
+        list-style: circle;
+
+        @media screen and (max-width: $screen) {
+            font-size: 1.6rem; 
+        }
+    }
+}

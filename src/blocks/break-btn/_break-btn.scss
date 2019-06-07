@@ -1,0 +1,34 @@
+.break-btn {
+    
+    &_type_short,
+    &_type_long {
+        @include w-h(160px);
+        @include border(2px, 30px);
+
+        margin: 10px 20px;
+        padding: 5px 15px;
+    
+        font-size: 2rem;
+
+        color: $text-info;
+    
+        cursor: pointer;
+
+        transition: .25s ease-in;
+
+        @media screen and (max-width: $screen) {
+            @include w-h(150px);
+            margin: 10px 0;
+            font-size: 1.8rem;
+        }
+
+        &:hover,
+        &:hover {
+            transform: scale(1.02);
+
+            color: $text;
+            border-color: $border-hover;
+            box-shadow: 0 0 10px $shadow;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'mixinTemplate';
+
+@import '../blocks/page/page';
+@import '../blocks/header/header';
+@import '../blocks/timer/timer';
+@import '../blocks/break-btn/break-btn';
+@import '../blocks/task-list/task-list';
+@import '../blocks/footer/footer';
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    color: $text;
+    background: $background;
+}
+
+html {
+    font-size: 12px;
+}

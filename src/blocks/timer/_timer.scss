@@ -1,0 +1,73 @@
+.timer {
+    @extend %flex-column;
+    justify-content: center;
+    align-self: center;
+
+    @include w-h(300px, 300px);
+    @include border(0px, 50%);
+    padding: 10px;
+
+    font-family: 'Roboto Mono', monospace;
+
+    cursor: pointer;
+
+    @media screen and (max-width: $screen) {
+        @include w-h(250px, 250px);
+    }
+
+    &__border {
+        align-self: center;
+        box-sizing: content-box;
+    
+        @include w-h(300px, 300px);
+        @include border(0px, 50%);
+        @include gradient($grad-timer1, $grad-timer2);
+    
+        padding: 5px;
+
+        transition: .25s ease-in;
+
+        @media screen and (max-width: $screen) {
+            @include w-h(250px, 250px);
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px $shadow;
+        }
+    }
+
+    &__time {
+        @extend %margin-auto;
+        padding-bottom: 10px;
+    
+        font-size: 5rem;
+    }
+
+    &__control {
+        @extend %margin-auto;
+    
+        font-size: 1.8rem;
+        color: $text-info;
+
+        @media screen and (max-width: $screen) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__break-btn {
+        align-self: center;
+        margin-top: 50px;
+
+        @media screen and (max-width: $screen) {
+            display: flex;
+            flex-flow: column wrap;
+            margin-top: 30px;
+        }
+    }
+}
+
+.timer:hover .timer_focus,
+.timer_cancel:hover {
+    color: $text-hover;
+}
