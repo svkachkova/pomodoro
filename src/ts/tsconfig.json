@@ -6,8 +6,9 @@
     "compilerOptions": {
         "noImplicitAny": true,
         "removeComments": true,
+        "outDir": "../build/js",
         "target": "es5",
-        "module": "commonjs",
+        "module": "es6",
         "sourceMap": true
     }
 }
