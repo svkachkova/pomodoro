@@ -5,14 +5,14 @@
 
     @include w-h(300px, 300px);
     @include border(0px, 50%);
-    padding: 10px;
+    padding: var(--space-s);
 
-    font-family: 'Roboto Mono', monospace;
+    font-family: var(--font-timer);
 
     cursor: pointer;
 
-    @media screen and (max-width: $screen) {
-        @include w-h(250px, 250px);
+    @media screen and (max-width: 480px) {
+        @include w-h(270px, 270px);
     }
 
     &__border {
@@ -21,53 +21,49 @@
     
         @include w-h(300px, 300px);
         @include border(0px, 50%);
-        @include gradient($grad-timer1, $grad-timer2);
+        @include gradient(var(--color-gradient-dark), var(--color-gradient-light));
     
-        padding: 5px;
+        padding: var(--space-xs);
 
         transition: .25s ease-in;
 
-        @media screen and (max-width: $screen) {
-            @include w-h(250px, 250px);
+        @media screen and (max-width: 480px) {
+            @include w-h(270px, 270px);
         }
 
         &:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 20px $shadow;
+            box-shadow: 0 0 20px var(--color-bg-shadow);
         }
     }
 
     &__time {
         @extend %margin-auto;
-        padding-bottom: 10px;
+        padding-bottom: var(--space-s);
     
-        font-size: 5rem;
+        font-size: var(--text-xl);
     }
 
     &__control {
         @extend %margin-auto;
     
-        font-size: 1.8rem;
-        color: $text-info;
-
-        @media screen and (max-width: $screen) {
-            font-size: 1.6rem;
-        }
+        font-size: var(--text-s);
+        color: var(--color-text-secondary);
     }
 
     &__break-btn {
         align-self: center;
-        margin-top: 50px;
+        margin-top: var(--space-xxl);
 
-        @media screen and (max-width: $screen) {
+        @media screen and (max-width: 480px) {
             display: flex;
             flex-flow: column wrap;
-            margin-top: 30px;
+            margin-top: var(--space-xl);
         }
     }
 }
 
 .timer:hover .timer_focus,
 .timer_cancel:hover {
-    color: $text-hover;
+    color: var(--color-text-accent);
 }

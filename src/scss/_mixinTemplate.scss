@@ -7,7 +7,7 @@
     border: {
         width: $size;
         style: solid;
-        color: $border;
+        color: var(--color-bg-border);
         radius: $radius;
     }
 }

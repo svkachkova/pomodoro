@@ -2,35 +2,26 @@
     @include w-h(70%);
     max-width: 1024px;
 
-    // padding: 0 50px;
     text-align: start;
 
-    @media screen and (max-width: $screen) {
+    @media screen and (max-width: 480px) {
         @include w-h(100%);
-        padding-left: 50px;
-        padding-right: 10px;
+        padding-left: var(--space-xxl);
+        padding-right: var(--space-s);
     }
 
     &__title {
-        padding: 20px 0;
+        padding: var(--space-l) 0;
 
         font-weight: 400;
-        font-size: 3rem;
-
-        @media screen and (max-width: $screen) {
-            font-size: 2.8rem;
-        }
+        font-size: var(--text-l);
     }
 
     &__list {}
 
     &__task {
-        padding: 5px 0;
-        font-size: 1.8rem;
+        padding: var(--space-xs) 0;
+        font-size: var(--text-s);
         list-style: circle;
-
-        @media screen and (max-width: $screen) {
-            font-size: 1.6rem; 
-        }
     }
 }

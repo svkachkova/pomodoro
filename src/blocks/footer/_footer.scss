@@ -2,15 +2,17 @@
     @include w-h(100%);
 
     &__autor {
-        font-size: 1.5rem;
-        color: $text-info;
+        font-size: var(--text-xs);
+        color: var(--color-text-secondary);
     }
 
     &__link {
         text-decoration: none;
 
+        color: var(--color-text-link);
+
         &:hover {
-            color: $text-hover;
+            color: var(--color-text-accent);
         }
     }
 }
