@@ -25,3 +25,11 @@ buttonsElem.addEventListener('click', event => {
         timer.start(15);
     }
 });
+
+// Switch
+const themeSwitch: Element = document.getElementById('themeSwitch');
+
+themeSwitch.addEventListener('change', () => {
+    const page: Element = document.querySelector('.page');
+    page.classList.toggle('theme_light');
+});
