@@ -1,5 +1,5 @@
 .header {
-    @include w-h(100%);
+    width: 100%;
     padding: var(--space-l) var(--space-s);
 
     @media screen and (max-width: 480px) {

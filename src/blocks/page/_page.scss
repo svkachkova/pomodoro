@@ -18,7 +18,7 @@
         @extend %margin-auto;
         @extend %user-select;
     
-        @include w-h(70%);
+        width: 70%;
         max-width: 1024px;
     
         padding: 90px 10px 60px;
@@ -27,7 +27,7 @@
         border-top: 1.5px solid var(--color-text-primary);
 
         @media screen and (max-width: 480px) {
-            @include w-h(100%);
+            width: 100%;
             padding: 50px 10px 30px;
         }
     }

@@ -3,7 +3,7 @@
     justify-content: center;
     align-self: center;
 
-    @include w-h(300px, 300px);
+    @include w-h(300px);
     @include border(0px, 50%);
     padding: var(--space-s);
 
@@ -12,23 +12,23 @@
     cursor: pointer;
 
     @media screen and (max-width: 480px) {
-        @include w-h(270px, 270px);
+        @include w-h(270px);
     }
 
     &__border {
         align-self: center;
         box-sizing: content-box;
     
-        @include w-h(300px, 300px);
+        @include w-h(300px);
         @include border(0px, 50%);
         @include gradient(var(--color-gradient-dark), var(--color-gradient-light));
     
         padding: var(--space-xs);
 
-        transition: .25s ease-in;
+        transition: transform .25s ease-in;
 
         @media screen and (max-width: 480px) {
-            @include w-h(270px, 270px);
+            @include w-h(270px);
         }
 
         &:hover {

@@ -1,11 +1,11 @@
 .task-list {
-    @include w-h(70%);
+    width: 70%;
     max-width: 1024px;
 
     text-align: start;
 
     @media screen and (max-width: 480px) {
-        @include w-h(100%);
+        width: 100%;
         padding-left: var(--space-xxl);
         padding-right: var(--space-s);
     }

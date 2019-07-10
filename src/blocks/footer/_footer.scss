@@ -1,5 +1,5 @@
 .footer {
-    @include w-h(100%);
+    width: 100%;
 
     &__autor {
         font-size: var(--text-xs);
