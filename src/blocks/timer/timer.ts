@@ -1,4 +1,4 @@
-export class Timer {
+export default class Timer {
     public isStarted: boolean = false;
 
     private time: [number, number] = [0, 0];
