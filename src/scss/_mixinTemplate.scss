@@ -1,4 +1,4 @@
-@mixin w-h($width: auto, $height: auto) {
+@mixin w-h($width, $height: $width) {
     width: $width;
 	height: $height;
 }
@@ -7,7 +7,7 @@
     border: {
         width: $size;
         style: solid;
-        color: $border;
+        color: var(--color-bg-border);
         radius: $radius;
     }
 }

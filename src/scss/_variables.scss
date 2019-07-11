@@ -1,25 +1,47 @@
-$text: #eee;
-$text-info: #bbb;
+:root {
+    // font family
+    --font-primary: 'Roboto Condensed', sans-serif;
+    --font-timer: 'Roboto Mono', monospace;
 
-$background: #202030;
-$shadow: #404050;
+    // font size
+    --text-base: 12px;
 
-$border: #669DFF;
-$border-hover: #80AEFF;
-$text-hover: #8EC5FC;
+    --text-xs: calc(1.5 * var(--text-base));
+    --text-s: calc(1.8 * var(--text-base));
+    --text-m: calc(2 * var(--text-base));
+    --text-l: calc(3 * var(--text-base));
+    --text-xl: calc(5 * var(--text-base));
+    --text-xxl: calc(6 * var(--text-base));
 
-$grad-timer1: #3993E5;
-$grad-timer2: #8373E5;
+    // space
+    --space-xs: 5px;
+    --space-s: 10px;
+    --space-m: 15px;
+    --space-l: 20px;
+    --space-xl: 30px;
+    --space-xxl: 50px;
 
-$screen: 480px;
+    // color
+    --color-text-primary: #eee;
+    --color-text-secondary: #bbb;
+    --color-text-accent: #80AEFF;
+    --color-text-link: #669DFF;
 
-// $grad-btn1: #648099;
-// $grad-btn2: #8E7DB2;
+    --color-bg-default: #202030;
+    --color-bg-light: #404050;
+    --color-bg-shadow: #404050;
+    --color-bg-border: #669DFF;
+    --color-bg-accent: #80AEFF;
+    --color-bg-point: #eee;
+    
+    --color-gradient-light: #8373E5;
+    --color-gradient-dark: #3993E5;
+}
 
-// light theme
+.theme_light {
+    --color-text-primary: #333;
+    --color-text-secondary: #555;
 
-// $text: #333;
-// $text-secondary: #444;
-// $text-info: #666;
-
-// $background: #f7f8F9;
+    --color-bg-default: #F7F8F9;
+    --color-bg-shadow: #7070AA;
+}

@@ -11,17 +11,14 @@ const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
-const browserify = require("browserify");
-const source = require('vinyl-source-stream');
-const tsify = require("tsify");
-const buffer = require('vinyl-buffer');
-const uglify = require('gulp-uglify');
+const webpack = require('webpack-stream');
+const webpackConfig = require('./webpack.config');
 const browserSync = require('browser-sync').create();
 
 task('compileStyles', () => {
     return src(dir.src + 'scss/style.scss')
     .pipe(plumber({
-        errorHandler: function (err) {
+        errorHandler: err => {
             console.log(err.message);
             this.emit('end');
         }
@@ -34,17 +31,8 @@ task('compileStyles', () => {
 });
 
 task('compileScripts', () => {
-    return browserify({
-        entries: dir.src + 'ts/index.ts',
-        debug: true,
-    })
-    .plugin(tsify, dir.src + "ts/tsconfig.json")
-    .bundle()
-    .pipe(source('index.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('/'))
+    return src(dir.src + 'ts/index.ts')
+    .pipe(webpack(webpackConfig))
     .pipe(dest(dir.build + 'js/'));
 });
 

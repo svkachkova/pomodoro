@@ -1,17 +1,15 @@
 .header {
-    @include w-h(100%);
-    padding: 20px 10px;
+    @extend %flex-column;
 
-    @media screen and (max-width: $screen) {
-        padding: 10px;
+    width: 100%;
+    padding: var(--space-l) var(--space-s);
+
+    @media screen and (max-width: 480px) {
+        padding: var(--space-s);
     }
 
     &__title {   
         font-weight: 400;
-        font-size: 6rem;
-
-        @media screen and (max-width: $screen) {
-            font-size: 5.2rem;
-        }
+        font-size: var(--text-xxl);
     }
 }

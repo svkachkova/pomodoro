@@ -3,6 +3,7 @@
 
 @import '../blocks/page/page';
 @import '../blocks/header/header';
+@import '../blocks/switch/switch';
 @import '../blocks/timer/timer';
 @import '../blocks/break-btn/break-btn';
 @import '../blocks/task-list/task-list';
@@ -14,10 +15,6 @@
     margin: 0;
     padding: 0;
 
-    color: $text;
-    background: $background;
-}
-
-html {
-    font-size: 12px;
+    color: var(--color-text-primary);
+    background: var(--color-bg-default);
 }

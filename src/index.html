@@ -11,6 +11,11 @@
 <body class="page">
     <header class="header page__header">
         <h1 class="header__title">Pomodoro</h1>
+        <div class="switch">
+            <input class="switch__input" type="checkbox" id="themeSwitch">
+            <label aria-hidden="true" class="switch__label" for="themeSwitch"></label>
+            <div aria-hidden="true" class="switch__marker"></div>
+        </div>  
     </header>
     <main class="page__timer">
         <div class="timer__border"><div class="timer">
@@ -18,8 +23,8 @@
             <div class="timer__control timer_focus">click to start</div>
         </div></div>
         <div class="timer__break-btn">
-            <button class="break-btn_type_short">short break</button>
-            <button class="break-btn_type_long">long break</button>
+            <button class="break-btn break-btn_type_short">short break</button>
+            <button class="break-btn break-btn_type_long">long break</button>
         </div>
     </main>
     <div class="task-list page__task-list">
