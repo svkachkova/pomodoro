@@ -1,15 +1,16 @@
 .timer {
-    @extend %flex-column;
     justify-content: center;
     align-self: center;
-
-    @include w-h(300px);
-    @include border(0px, 50%);
     padding: var(--space-s);
 
     font-family: var(--font-timer);
 
     cursor: pointer;
+
+    @extend %flex-column;
+
+    @include w-h(300px);
+    @include border(0, 50%);
 
     @media screen and (max-width: 480px) {
         @include w-h(270px);
@@ -19,13 +20,13 @@
         align-self: center;
         box-sizing: content-box;
 
-        @include w-h(300px);
-        @include border(0px, 50%);
-        @include gradient(var(--color-gradient-dark), var(--color-gradient-light));
-
         padding: var(--space-xs);
 
         transition: transform 0.25s ease-in;
+
+        @include w-h(300px);
+        @include border(0, 50%);
+        @include gradient(var(--color-gradient-dark), var(--color-gradient-light));
 
         @media screen and (max-width: 480px) {
             @include w-h(270px);
@@ -38,17 +39,18 @@
     }
 
     &__time {
-        @extend %margin-auto;
         padding-bottom: var(--space-s);
 
         font-size: var(--text-xl);
+
+        @extend %margin-auto;
     }
 
     &__control {
-        @extend %margin-auto;
-
         font-size: var(--text-s);
         color: var(--color-text-secondary);
+
+        @extend %margin-auto;
     }
 
     &__break-btn {

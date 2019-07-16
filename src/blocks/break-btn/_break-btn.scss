@@ -1,6 +1,5 @@
 .break-btn {
     width: 160px;
-    @include border(2px, 50em);
 
     margin: var(--space-s) var(--space-l);
     padding: var(--space-xs) var(--space-m);
@@ -12,6 +11,8 @@
     cursor: pointer;
 
     transition: transform 0.2s ease-in;
+
+    @include border(2px, 50em);
 
     @media screen and (max-width: 480px) {
         margin: var(--space-s) 0;

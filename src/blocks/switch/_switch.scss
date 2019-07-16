@@ -3,12 +3,12 @@
     --switch-width: 50px;
     --switch-height: 25px;
     --switch-padding: 3px;
-  
+
     // animation
     --switch-animation-duration: 0.2s;
-  }
-  
-  .switch {
+}
+
+.switch {
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -16,55 +16,53 @@
 
     position: relative;
 
-    @include w-h(var(--switch-width), var(--switch-height));
-    @include border(0px, 50em);
-
     margin-top: calc(-1 * var(--switch-height));
-    margin-right: var(--switch-height); 
+    margin-right: var(--switch-height);
     padding: var(--switch-padding) 0;
 
+    @include w-h(var(--switch-width), var(--switch-height));
+    @include border(0, 50em);
+
     @media screen and (max-width: 480px) {
-      margin: 0;
+        margin: 0;
     }
 
     &__input,
     &__label {
-      position: absolute;
-      left: 0;
-      top: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
     &__input {
-        @include w-h(0);
         opacity: 0;
         pointer-events: none;
-      
-        &:checked + .switch__label {
-          background-color: var(--color-bg-accent);
-        }
-      
-        &:checked + .switch__label + .switch__marker {
-          left: calc(100% - var(--switch-height) + var(--switch-padding));
-        }
-    } 
-    
-    &__label {
-        @include w-h(100%);
-        @include border(0px, inherit);
 
+        @include w-h(0);
+
+        &:checked + .switch__label {
+            background-color: var(--color-bg-accent);
+        }
+
+        &:checked + .switch__label + .switch__marker {
+            left: calc(100% - var(--switch-height) + var(--switch-padding));
+        }
+    }
+
+    &__label {
         z-index: 1;
         background-color: var(--color-bg-light);
-        
+
         transition: background-color var(--switch-animation-duration);
+
+        @include w-h(100%);
+        @include border(0, inherit);
     }
 
     &__marker {
         position: relative;
         left: var(--switch-padding);
         z-index: 2;
-
-        @include w-h(calc(var(--switch-height) - var(--switch-padding) * 2));
-        @include border(0px, 50%);
 
         pointer-events: none;
 
@@ -73,5 +71,8 @@
 
         transition: left var(--switch-animation-duration);
         will-change: left;
+
+        @include w-h(calc(var(--switch-height) - var(--switch-padding) * 2));
+        @include border(0, 50%);
     }
-  }
+}
