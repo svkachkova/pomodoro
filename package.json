@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp build",
     "dev": "gulp dev",
-    "fix": "eslint --fix src/**/*.ts"
+    "fix": "eslint --fix src/**/*.ts && prettier --write src/**/*.*"
   },
   "repository": {
     "type": "git",
@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/svkachkova/Pomodoro#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.10.2",
-    "@typescript-eslint/parser": "^1.10.2",
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.12.0",
     "browser-sync": "^2.26.5",
-    "del": "^4.1.1",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
+    "del": "^5.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
@@ -36,8 +36,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "prettier": "^1.18.2",
-    "ts-loader": "^6.0.2",
-    "typescript": "^3.5.1",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
     "webpack-stream": "^5.2.1"
   }
 }
