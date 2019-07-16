@@ -18,14 +18,14 @@
     &__border {
         align-self: center;
         box-sizing: content-box;
-    
+
         @include w-h(300px);
         @include border(0px, 50%);
         @include gradient(var(--color-gradient-dark), var(--color-gradient-light));
-    
+
         padding: var(--space-xs);
 
-        transition: transform .25s ease-in;
+        transition: transform 0.25s ease-in;
 
         @media screen and (max-width: 480px) {
             @include w-h(270px);
@@ -40,13 +40,13 @@
     &__time {
         @extend %margin-auto;
         padding-bottom: var(--space-s);
-    
+
         font-size: var(--text-xl);
     }
 
     &__control {
         @extend %margin-auto;
-    
+
         font-size: var(--text-s);
         color: var(--color-text-secondary);
     }
