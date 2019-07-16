@@ -6,7 +6,9 @@
   "scripts": {
     "start": "gulp build",
     "dev": "gulp dev",
-    "fix": "eslint --fix src/**/*.ts && prettier --write src/**/*.*"
+    "fix-scss": "stylelint --fix src/**/*.scss",
+    "fix-ts": "eslint --fix src/**/*.ts",
+    "fix": "npm run fix-scss & npm run fix-ts && prettier --write src/**/*.*"
   },
   "repository": {
     "type": "git",
@@ -36,6 +38,11 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-order": "^3.0.1",
+    "stylelint-scss": "^3.9.1",
+    "stylelint-selector-bem-pattern": "^2.1.0",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "webpack-stream": "^5.2.1"
