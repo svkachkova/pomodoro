@@ -12,20 +12,13 @@
     display: flex;
     flex-shrink: 0;
     align-items: center;
-    align-self: flex-end;
 
     position: relative;
 
-    margin-top: calc(-1 * var(--switch-height));
-    margin-right: var(--switch-height);
     padding: var(--switch-padding) 0;
 
     @include w-h(var(--switch-width), var(--switch-height));
     @include border(0, 50em);
-
-    @media screen and (max-width: 480px) {
-        margin: 0;
-    }
 
     &__input,
     &__label {

@@ -1,5 +1,4 @@
 .header {
-    width: 100%;
     padding: var(--space-l) var(--space-s);
 
     @extend %flex-column;
@@ -11,5 +10,15 @@
     &__title {
         font-weight: 400;
         font-size: var(--text-xxl);
+    }
+
+    &__switch {
+        align-self: flex-end;
+
+        margin-top: calc(-1 * var(--switch-height));
+
+        @media screen and (max-width: 480px) {
+            visibility: hidden;
+        }
     }
 }

@@ -11,10 +11,13 @@
         --text-base: 10px;
     }
 
-    &__timer {
-        width: 70%;
-        max-width: 1024px;
+    &__content {
+        max-width: 768px;
 
+        @extend %margin-auto;
+    }
+
+    &__timer {
         padding: 90px 10px 60px;
 
         border-bottom: 1.5px solid var(--color-text-primary);
@@ -25,7 +28,6 @@
         @extend %user-select;
 
         @media screen and (max-width: 480px) {
-            width: 100%;
             padding: 50px 10px 30px;
         }
     }
