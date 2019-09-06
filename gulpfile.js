@@ -2,6 +2,7 @@
 
 const dir = {
     src: './src/',
+    public: './public/',
     build: './build/' 
 };
 
@@ -37,7 +38,7 @@ task('compileScripts', () => {
 });
 
 task('copyHTML', () => {
-    return src(dir.src + '**/*.{html,ico}')
+    return src(dir.public + '*.{html,ico}')
     .pipe(dest(dir.build));
 });
 
@@ -48,7 +49,7 @@ task('clean', () => {
 task('watch', () => {
     watch(dir.src + '**/*.scss', series('compileStyles'));
     watch(dir.src + '**/*.ts', series('compileScripts'));
-    watch(dir.src + '*.{html,ico}', series('copyHTML'));
+    watch(dir.public + '*.{html,ico}', series('copyHTML'));
 });
 
 task('serve', () => {
