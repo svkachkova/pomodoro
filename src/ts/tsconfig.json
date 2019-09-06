@@ -1,11 +1,13 @@
 {
-    "files": ["../blocks/timer/timer.ts", "index.ts"],
+    "files": ["../blocks/timer/timer.ts", "index.ts", "../blocks/hello/hello.ts"],
     "compilerOptions": {
         "noImplicitAny": true,
         "removeComments": true,
+        "esModuleInterop": true,
         "outDir": "../build/js",
         "target": "es5",
         "module": "es6",
-        "sourceMap": true
+        "sourceMap": true,
+        "jsx": "react"
     }
 }

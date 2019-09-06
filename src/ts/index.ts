@@ -1,4 +1,14 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import Timer from '../blocks/timer/timer';
+import Hello from '../blocks/hello/hello';
+
+// ReactDOM.render(<Hello />, document.getElementById('hello'));
+ReactDOM.render(
+    React.createElement(Hello),
+    document.getElementById('hello')
+  );
 
 const timerElem: Element = document.querySelector('.timer');
 const buttonsElem: Element = document.querySelector('.timer__break-btn');
