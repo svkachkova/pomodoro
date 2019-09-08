@@ -4,12 +4,6 @@ import ReactDOM from 'react-dom';
 import Timer from '../blocks/timer/timer';
 import Hello from '../blocks/hello/hello';
 
-// ReactDOM.render(<Hello />, document.getElementById('hello'));
-ReactDOM.render(
-    React.createElement(Hello),
-    document.getElementById('hello')
-  );
-
 const timerElem: Element = document.querySelector('.timer');
 const buttonsElem: Element = document.querySelector('.timer__break-btn');
 
@@ -43,3 +37,6 @@ themeSwitch.addEventListener('change', () => {
     const page: Element = document.querySelector('.page');
     page.classList.toggle('theme_light');
 });
+
+// Hello
+ReactDOM.render(React.createElement(Hello), document.getElementById('hello'));
