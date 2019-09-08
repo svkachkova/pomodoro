@@ -7,7 +7,7 @@
     "start": "gulp build",
     "dev": "gulp dev",
     "fix-scss": "stylelint --fix src/**/*.scss",
-    "fix-ts": "eslint --fix src/**/*.ts",
+    "fix-ts": "eslint --fix src/**/*.ts src/**/*.tsx",
     "fix": "npm run fix-scss & npm run fix-ts && prettier --write src/**/*.*",
     "test": "mocha -r ts-node/register -r jsdom-global/register src/**/*.test.ts",
     "npm-check": "npx npm-check -u"

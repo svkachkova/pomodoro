@@ -10,7 +10,7 @@ const buttonsElem: Element = document.querySelector('.timer__break-btn');
 const timer: Timer = new Timer(timerElem);
 
 timerElem.addEventListener('click', event => {
-    const target: Element = <Element>event.target;
+    const target: Element = event.target as Element;
     if (timer.isStarted == true) {
         if (target.matches('.timer__control') && target.classList.contains('timer_cancel')) {
             timer.cancel();
@@ -21,7 +21,7 @@ timerElem.addEventListener('click', event => {
 });
 
 buttonsElem.addEventListener('click', event => {
-    const target: Element = <Element>event.target;
+    const target: Element = event.target as Element;
     if (target.matches('.break-btn_type_short')) {
         timer.start(5);
     }
