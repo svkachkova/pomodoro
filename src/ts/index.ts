@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Timer from '../blocks/timer/timer';
-import Hello from '../blocks/hello/hello';
+import TaskList from '../blocks/task-list/task-list';
 
 const timerElem: Element = document.querySelector('.timer');
 const buttonsElem: Element = document.querySelector('.timer__break-btn');
@@ -38,5 +38,5 @@ themeSwitch.addEventListener('change', () => {
     page.classList.toggle('theme_light');
 });
 
-// Hello
-ReactDOM.render(React.createElement(Hello), document.getElementById('hello'));
+// TaskList
+ReactDOM.render(React.createElement(TaskList), document.getElementById('task-list'));
