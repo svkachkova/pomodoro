@@ -1,5 +1,10 @@
 {
-    "files": ["../blocks/timer/timer.ts", "index.ts", "../blocks/task-list/task-list.tsx"],
+    "files": [
+        "../blocks/timer/timer.ts", 
+        "index.ts", 
+        "../blocks/task-list/task-list.tsx",
+        "../blocks/task-list/form.tsx"
+    ],
     "compilerOptions": {
         "noImplicitAny": true,
         "removeComments": true,
