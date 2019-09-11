@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import Timer from '../blocks/timer/timer';
 import TaskList from '../blocks/task-list/task-list';
 
+const Cookies = require('js-cookie');
+
 const timerElem: Element = document.querySelector('.timer');
 const buttonsElem: Element = document.querySelector('.timer__break-btn');
 
@@ -30,12 +32,22 @@ buttonsElem.addEventListener('click', event => {
     }
 });
 
-// Switch
+// ThemeSwitch
 const themeSwitch: Element = document.getElementById('themeSwitch');
+const page: Element = document.querySelector('.page');
+
+if (Cookies.get('theme') === 'light') {
+    page.classList.add('theme_light');
+}
 
 themeSwitch.addEventListener('change', () => {
-    const page: Element = document.querySelector('.page');
-    page.classList.toggle('theme_light');
+    if (Cookies.get('theme') === 'light') {
+        Cookies.set('theme', 'dark');
+        page.classList.remove('theme_light');
+    } else {
+        Cookies.set('theme', 'light');
+        page.classList.add('theme_light');
+    }
 });
 
 // TaskList
