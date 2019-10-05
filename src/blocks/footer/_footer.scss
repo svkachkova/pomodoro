@@ -10,7 +10,8 @@
         color: var(--color-text-link);
 
         &:hover {
-            color: var(--color-text-accent);
+            text-decoration: underline;
+            // color: var(--color-text-accent);
         }
     }
 }
