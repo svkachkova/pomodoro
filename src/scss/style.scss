@@ -17,4 +17,21 @@
 
     color: var(--color-text-primary);
     background: var(--color-bg-default);
+
+    // новый фокус 
+    &:focus {
+        // outline: 3px dotted var(--color-text-primary);
+
+        // outline: none;
+        // box-shadow: 0 0 0 2px var(--color-text-primary),
+        //             0 0 0 6px var(--color-bg-border);
+        
+        outline: none;
+        box-shadow: 0 0 0 3px hsla(218, 100%, 75%, 0.75), 
+                    0 0 0 10px hsla(0, 0%, 100%, 0.25);
+    }
+}
+
+button:focus {
+    border-color: transparent;
 }
