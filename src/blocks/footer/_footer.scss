@@ -9,8 +9,9 @@
         text-decoration: none;
         color: var(--color-text-link);
 
-        &:hover {
-            color: var(--color-text-accent);
+        &:hover,
+        &:active {
+            text-decoration: underline;
         }
     }
 }
