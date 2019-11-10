@@ -33,20 +33,30 @@ buttonsElem.addEventListener('click', event => {
 });
 
 // ThemeSwitch
-const themeSwitch: Element = document.getElementById('themeSwitch');
+const themeSwitch: Element = document.querySelector('.theme-switch');
+const icon: Element = themeSwitch.querySelector('.theme-switch__icon');
 const page: Element = document.querySelector('.page');
 
 if (Cookies.get('theme') === 'light') {
     page.classList.add('theme_light');
+
+    icon.setAttribute('src', './img/moon.svg');
+    icon.setAttribute('alt', 'Dark theme');
 }
 
-themeSwitch.addEventListener('change', () => {
+themeSwitch.addEventListener('click', () => {
     if (Cookies.get('theme') === 'light') {
         Cookies.set('theme', 'dark');
         page.classList.remove('theme_light');
+
+        icon.setAttribute('src', './img/sun.svg');
+        icon.setAttribute('alt', 'Light theme');
     } else {
         Cookies.set('theme', 'light');
         page.classList.add('theme_light');
+
+        icon.setAttribute('src', './img/moon.svg');
+        icon.setAttribute('alt', 'Dark theme');
     }
 });
 
