@@ -53,7 +53,7 @@ task('clean', () => {
 
 task('watch', () => {
     watch(dir.src + '**/*.scss', series('compileStyles'));
-    watch(dir.src + '**/*.ts', series('compileScripts'));
+    watch(dir.src + '**/*.{ts,tsx}', series('compileScripts'));
     watch(dir.public + 'img/*.svg', series('copySVG'));
     watch(dir.public + '*.{html,ico}', series('copyHTML'));
 });
