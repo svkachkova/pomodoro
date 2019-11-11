@@ -4,6 +4,8 @@
 
 .theme-switch {
     border: 0;
+
+    cursor: pointer;
     
     @include w-h(var(--switch-size));
 }
