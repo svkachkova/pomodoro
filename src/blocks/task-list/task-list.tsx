@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
 
 import Form from './form';
+import Task from './task';
+
+type TaskItem = {
+    id: number,
+    text: string,
+    checked: boolean
+};
 
 type Props = {};
 type State = {
-    tasks: string[]
+    tasks: TaskItem[]
 };
 
-const initialTasks: string[] = [
-    'Focus for 25 minutes',
-    'Break for 5 minutes',
-    'Every three cycles, break for 15 minutes'
+const initialTasks: TaskItem[] = [
+    {
+        id: 0,
+        text: 'Focus for 25 minutes',
+        checked: false
+    },
+    {
+        id: 1,
+        text: 'Break for 5 minutes',
+        checked: false
+    },
+    {
+        id: 2,
+        text: 'Every three cycles, break for 15 minutes',
+        checked: false
+    }
 ];
 
 class TaskList extends Component<Props, State> {
@@ -23,30 +42,57 @@ class TaskList extends Component<Props, State> {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleRemove = this.handleRemove.bind(this);
     }
 
-    handleSubmit(task: string) {
+    handleSubmit(taskText: string) {
+        const tasks = [...this.state.tasks];
+        let lastId: number = -1;
+
+        if (tasks.length) {
+            lastId = tasks[tasks.length - 1].id;
+        }
+
+        const task: TaskItem = {
+            id: lastId + 1,
+            text: taskText,
+            checked: false
+        };
+
         this.setState({
             tasks: [...this.state.tasks, task]
+        });
+    }
+
+    handleRemove(taskId: number) {
+        const tasks = [...this.state.tasks];
+        let taskIndex: number;
+
+        tasks.map((task, index) => {
+            if (task.id === taskId) {
+                taskIndex = index;
+            }
+        });
+
+        tasks.splice(taskIndex, 1);
+
+        this.setState({
+            tasks: tasks
         });
     }
 
     render() {
         const { tasks } = this.state;
 
-        const taskList: JSX.Element[] = tasks.map((task: string) => {
-            return (
-                <li key= {task.trim()} className='task-list__task'>
-                    {task}
-                </li>
-            );
+        const taskList: JSX.Element[] = tasks.map((task: TaskItem) => {
+            return <Task key={task.id} task={task} handleRemove={this.handleRemove}/>;
         });
 
         return (
-            <div className="task-list page__task-list">
-                {/* <h2 className="task-list__title">Task List</h2> */}
+            <div className='task-list page__task-list'>
+                <h2 className="task-list__title">Task List</h2>
                 <Form handleSubmit={this.handleSubmit} />
-                <ul className="task-list__list">
+                <ul className='task-list__list'>
                     {taskList}
                 </ul>
             </div>

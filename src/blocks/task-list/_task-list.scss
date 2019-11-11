@@ -1,13 +1,12 @@
 .task-list {
     text-align: start;
 
-    @media screen and (max-width: 480px) {
-        padding-left: var(--space-xxl);
-        padding-right: var(--space-s);
+    &__form {
+        padding: var(--space-l) 0;
     }
 
     &__title {
-        padding: var(--space-l) 0;
+        padding-top: var(--space-l);
 
         font-weight: 400;
         font-size: var(--text-l);
@@ -16,6 +15,75 @@
     &__task {
         padding: var(--space-xs) 0;
         font-size: var(--text-s);
-        list-style: circle;
+        list-style: none;
+    }
+
+    &__checkbox {
+        margin: 0 var(--space-s);
+    }
+
+    &__remove-btn {
+        margin: 0 var(--space-s);
+        border: 0;
+
+        font-family: var(--font-primary);
+        font-size: var(--text-s);
+        font-weight: 300;
+
+        color: var(--color-text-secondary);
+
+        cursor: pointer;
+
+        @include w-h(30px);
+
+        &:hover,
+        &:focus {
+            color: var(--color-text-accent);
+        }
+    }
+}
+
+.form {
+
+    &__input {
+        max-width: 250px;
+
+        margin: var(--space-xs);
+        padding: var(--space-xs) var(--space-m);
+        border: 1px solid var(--color-text-primary);
+        border-radius: 5px;
+
+        font-family: var(--font-primary);
+        font-size: var(--text-s);
+        font-weight: 300;
+
+        &:hover,
+        &:focus {
+            border-color: var(--color-bg-border);
+        }
+    }
+
+    &__submit {
+        width: 80px;
+
+        margin: var(--space-xs);
+        padding: var(--space-xs) var(--space-m);
+
+        font-family: var(--font-primary);
+        font-size: var(--text-s);
+        font-weight: 300;
+
+        color: var(--color-text-secondary);
+
+        cursor: pointer;
+
+        @include border(2px, 50em);
+
+        &:hover,
+        &:active {
+            color: var(--color-text-primary);
+            border-color: var(--color-bg-accent);
+            box-shadow: 0 0 10px var(--color-bg-shadow);
+        }
     }
 }

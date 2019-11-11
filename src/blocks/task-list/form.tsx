@@ -1,4 +1,4 @@
-import React, { FunctionComponent, Component } from 'react';
+import React, { Component } from 'react';
 
 type Props = {
     handleSubmit: (task: string) => void
@@ -30,26 +30,25 @@ class Form extends Component<Props, State> {
     submitForm = () => {
         event.preventDefault();
 
-        this.props.handleSubmit(this.state.task);
-        this.setState({
-            task: ''
-        })
+        if (this.state.task.trim()) {
+            this.props.handleSubmit(this.state.task);
+            this.setState({
+                task: ''
+            })
+        }
     }
 
     render() {
         return (
-            <form>
+            <form className='task-list__form form'>
                 <input 
+                    className='form__input'
                     type='text'
                     value={this.state.task}
                     placeholder='Type a task...'
                     onChange={this.handleChange}
                 />
-                <input 
-                    type='submit'
-                    value='Add'
-                    onClick={this.submitForm}
-                />
+                <button className='form__submit' onClick={this.submitForm}>Add</button>
             </form>
         );
     }
