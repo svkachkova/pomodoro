@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Form from './form';
 import Task from './task';
-
 import { TaskItem, Tasks} from './task-list.types';
 
 type Props = {};
@@ -12,21 +11,23 @@ type State = {
 
 const initialTasks: Tasks = [
     {
-        id: 0,
+        id: 0.1,
         text: 'Focus for 25 minutes',
         checked: false
     },
     {
-        id: 1,
+        id: 0.2,
         text: 'Break for 5 minutes',
         checked: false
     },
     {
-        id: 2,
+        id: 0.3,
         text: 'Every three cycles, break for 15 minutes',
         checked: false
     }
 ];
+
+let index = 0;
 
 class TaskList extends Component<Props, State> {
 
@@ -38,42 +39,42 @@ class TaskList extends Component<Props, State> {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChecked = this.handleChecked.bind(this);
         this.handleRemove = this.handleRemove.bind(this);
     }
 
-    handleSubmit(taskText: string) {
+    handleSubmit(text: string) {
         const tasks = [...this.state.tasks];
-        let lastId: number = -1;
-
-        if (tasks.length) {
-            lastId = tasks[tasks.length - 1].id;
-        }
-
-        const task: TaskItem = {
-            id: lastId + 1,
-            text: taskText,
-            checked: false
-        };
+        const id = index++;
 
         this.setState({
-            tasks: [...this.state.tasks, task]
+            tasks: [...tasks, { id, text, checked: false }]
         });
     }
 
-    handleRemove(taskId: number) {
+    handleChecked(id: number) {
         const tasks = [...this.state.tasks];
-        let taskIndex: number;
 
-        tasks.map((task, index) => {
-            if (task.id === taskId) {
-                taskIndex = index;
-            }
+        const newTasks: Tasks = tasks.map((task: TaskItem) => {
+            if (task.id === id) task.checked = !task.checked;
+            return task;
         });
 
-        tasks.splice(taskIndex, 1);
+        this.setState({
+            tasks: newTasks
+        });
+    }
+
+    handleRemove(id: number) {
+        const tasks = [...this.state.tasks];
+        
+        const newTasks: Tasks = tasks.reduce((res: Tasks, task: TaskItem) => {
+            if (task.id !== id) res.push(task);
+            return res;
+        }, []);
 
         this.setState({
-            tasks: tasks
+            tasks: newTasks
         });
     }
 
@@ -81,7 +82,14 @@ class TaskList extends Component<Props, State> {
         const { tasks } = this.state;
 
         const taskList: JSX.Element[] = tasks.map((task: TaskItem) => {
-            return <Task key={task.id} task={task} handleRemove={this.handleRemove}/>;
+            return (
+                <Task 
+                    key={task.id} 
+                    task={task}
+                    checked={this.handleChecked}
+                    remove={this.handleRemove}
+                />
+            );
         });
 
         return (
