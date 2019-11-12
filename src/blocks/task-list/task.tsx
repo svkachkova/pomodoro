@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
-type TaskItem = {
-    id: number,
-    text: string,
-    checked: boolean
-};
+import { TaskItem } from './task-list.types';
 
 type Props = {
     task: TaskItem,

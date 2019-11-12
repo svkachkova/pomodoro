@@ -4,7 +4,8 @@
         "index.ts", 
         "../blocks/task-list/task-list.tsx",
         "../blocks/task-list/form.tsx",
-        "../blocks/task-list/task.tsx"
+        "../blocks/task-list/task.tsx",
+        "../blocks/task-list/task-list.types.ts"
     ],
     "compilerOptions": {
         "noImplicitAny": true,

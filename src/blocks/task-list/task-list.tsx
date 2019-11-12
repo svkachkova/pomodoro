@@ -3,18 +3,14 @@ import React, { Component } from 'react';
 import Form from './form';
 import Task from './task';
 
-type TaskItem = {
-    id: number,
-    text: string,
-    checked: boolean
-};
+import { TaskItem, Tasks} from './task-list.types';
 
 type Props = {};
 type State = {
-    tasks: TaskItem[]
+    tasks: Tasks
 };
 
-const initialTasks: TaskItem[] = [
+const initialTasks: Tasks = [
     {
         id: 0,
         text: 'Focus for 25 minutes',
