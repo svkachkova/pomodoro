@@ -22,3 +22,8 @@
         outline: 3px dotted var(--color-text-primary);
     }
 }
+
+input,
+button {
+    font: inherit;
+}

@@ -26,10 +26,7 @@
         margin: 0 var(--space-s);
         border: 0;
 
-        font-family: var(--font-primary);
         font-size: var(--text-s);
-        font-weight: 300;
-
         color: var(--color-text-secondary);
 
         cursor: pointer;
@@ -53,9 +50,7 @@
         border: 1px solid var(--color-text-primary);
         border-radius: 5px;
 
-        font-family: var(--font-primary);
         font-size: var(--text-s);
-        font-weight: 300;
 
         &:hover,
         &:focus {
@@ -69,10 +64,7 @@
         margin: var(--space-xs);
         padding: var(--space-xs) var(--space-m);
 
-        font-family: var(--font-primary);
         font-size: var(--text-s);
-        font-weight: 300;
-
         color: var(--color-text-secondary);
 
         cursor: pointer;
