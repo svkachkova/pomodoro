@@ -35,7 +35,7 @@ class TaskList extends Component<Props, State> {
         super(props);
 
         this.state = {
-            tasks: initialTasks
+            tasks: JSON.parse(localStorage.getItem('tasks')) || initialTasks
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,12 +44,11 @@ class TaskList extends Component<Props, State> {
     }
 
     handleSubmit(text: string) {
-        const tasks = [...this.state.tasks];
         const id = index++;
+        const newTasks = [...this.state.tasks, { id, text, checked: false }];
 
-        this.setState({
-            tasks: [...tasks, { id, text, checked: false }]
-        });
+        this.setState({ tasks: newTasks });
+        localStorage.setItem('tasks', JSON.stringify(newTasks));
     }
 
     handleChecked(id: number) {
@@ -60,9 +59,8 @@ class TaskList extends Component<Props, State> {
             return task;
         });
 
-        this.setState({
-            tasks: newTasks
-        });
+        this.setState({ tasks: newTasks });
+        localStorage.setItem('tasks', JSON.stringify(newTasks));
     }
 
     handleRemove(id: number) {
@@ -73,9 +71,8 @@ class TaskList extends Component<Props, State> {
             return res;
         }, []);
 
-        this.setState({
-            tasks: newTasks
-        });
+        this.setState({ tasks: newTasks });
+        localStorage.setItem('tasks', JSON.stringify(newTasks));
     }
 
     render() {
