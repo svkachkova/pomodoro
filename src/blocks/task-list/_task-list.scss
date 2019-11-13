@@ -16,6 +16,10 @@
         padding: var(--space-xs) 0;
         font-size: var(--text-s);
         list-style: none;
+
+        &_line-through {
+            text-decoration: line-through;
+        }
     }
 
     &__checkbox {
