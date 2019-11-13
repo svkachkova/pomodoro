@@ -9,8 +9,6 @@
 
     cursor: pointer;
 
-    transition: transform 0.2s ease-in;
-
     @include border(2px, 50em);
 
     @media screen and (max-width: 480px) {
@@ -19,8 +17,6 @@
 
     &:hover,
     &:active {
-        transform: scale(1.02);
-
         color: var(--color-text-primary);
         border-color: var(--color-bg-accent);
         box-shadow: 0 0 10px var(--color-bg-shadow);
