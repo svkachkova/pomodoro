@@ -1,4 +1,8 @@
 .task-list {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
     text-align: start;
 
     &__form {
@@ -12,10 +16,22 @@
         font-size: var(--text-l);
     }
 
+    &__list {
+        width: 100%;
+    }
+
     &__task {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
         padding: var(--space-xs) 0;
         font-size: var(--text-s);
         list-style: none;
+    }
+
+    &__label {
+        cursor: pointer;
 
         &_line-through {
             text-decoration: line-through;
@@ -24,9 +40,16 @@
 
     &__checkbox {
         margin: 0 var(--space-s);
+
+        &:checked {
+            box-shadow: 0 0 1px 1px var(--color-bg-border);
+            // box-shadow: 0 0 2px 1px var(--color-bg-border);
+        }
     }
 
     &__remove-btn {
+        flex-shrink: 0;
+
         margin: 0 var(--space-s);
         border: 0;
 
@@ -45,9 +68,14 @@
 }
 
 .form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    width: 100%;
 
     &__input {
-        max-width: 250px;
+        min-width: 150px;
 
         margin: var(--space-xs);
         padding: var(--space-xs) var(--space-m);
@@ -60,10 +88,14 @@
         &:focus {
             border-color: var(--color-bg-border);
         }
+
+        @media screen and (min-width: 480px) {
+            width: 50%;
+        }
     }
 
     &__submit {
-        width: 80px;
+        width: 155px;
 
         margin: var(--space-xs);
         padding: var(--space-xs) var(--space-m);

@@ -16,8 +16,8 @@ class Task extends Component<Props, State> {
         const { task, checked, remove } = this.props;
 
         return (
-            <li className={'task-list__task' + (task.checked ? ' task-list__task_line-through' : '')}>
-                <label>
+            <li className="task-list__task">
+                <label className={'task-list__label' + (task.checked ? ' task-list__label_line-through' : '')}>
                     <input 
                         className="task-list__checkbox"
                         type="checkbox"
@@ -29,7 +29,7 @@ class Task extends Component<Props, State> {
                 <button 
                     className="task-list__remove-btn" 
                     onClick={() => remove(task.id)}
-                >x</button>
+                >&times;</button>
             </li>
         );
     }
