@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 
 type Props = {
-    handleSubmit: (task: string) => void
+    handleSubmit: (task: string) => void;
 };
 
 type State = {
-    task: string
+    task: string;
 };
 
 class Form extends Component<Props, State> {
-
     constructor(props: Props) {
         super(props);
 
         this.state = {
-            task: ''
-        }
+            task: '',
+        };
 
         this.handleChange = this.handleChange.bind(this);
         this.submitForm = this.submitForm.bind(this);
@@ -23,7 +22,7 @@ class Form extends Component<Props, State> {
 
     handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         this.setState({
-            task: event.target.value
+            task: event.target.value,
         });
     }
 
@@ -33,25 +32,27 @@ class Form extends Component<Props, State> {
         if (this.state.task.trim()) {
             this.props.handleSubmit(this.state.task);
             this.setState({
-                task: ''
-            })
+                task: '',
+            });
         }
-    }
+    };
 
     render() {
         return (
-            <form className='task-list__form form'>
-                <input 
-                    className='form__input'
-                    type='text'
+            <form className="task-list__form form">
+                <input
+                    className="form__input"
+                    type="text"
                     value={this.state.task}
-                    placeholder='Type a task...'
+                    placeholder="Type a task..."
                     onChange={this.handleChange}
                 />
-                <button className='form__submit' onClick={this.submitForm}>Add</button>
+                <button className="form__submit" onClick={this.submitForm}>
+                    Add
+                </button>
             </form>
         );
     }
-};
+}
 
 export default Form;
