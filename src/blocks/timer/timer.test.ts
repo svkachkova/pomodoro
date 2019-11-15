@@ -50,7 +50,7 @@ describe('timer', () => {
         });
     });
 
-    describe('timer.cance()', () => {
+    describe('timer.cancel()', () => {
         const [timerElem, timeElem, controlElem]: Element[] = createTimer();
         const timer: Timer = new Timer(timerElem);
 
