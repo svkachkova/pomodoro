@@ -26,7 +26,7 @@ class Form extends Component<Props, State> {
         });
     }
 
-    submitForm = () => {
+    submitForm = (event: React.FormEvent<HTMLButtonElement>) => {
         event.preventDefault();
 
         if (this.state.task.trim()) {

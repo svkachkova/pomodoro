@@ -6,11 +6,12 @@
   "scripts": {
     "start": "gulp build",
     "dev": "gulp dev",
-    "fix-scss": "stylelint --fix src/**/*.scss",
-    "fix-ts": "eslint --fix src/**/*.ts src/**/*.tsx",
-    "fix": "npm run fix-scss & npm run fix-ts && prettier --write src/**/*.*",
-    "test-jest": "jest",
-    "test": "mocha -r ts-node/register -r jsdom-global/register src/**/*.test.ts",
+    "fix:scss": "stylelint --fix src/**/*.scss",
+    "fix:ts": "eslint --fix src/**/*.ts src/**/*.tsx",
+    "fix": "npm run fix:scss && npm run fix:ts && prettier --write src/**/*.*",
+    "test:mocha": "mocha -r ts-node/register -r jsdom-global/register src/**/*.test.ts",
+    "test:jest": "jest",
+    "test": "npm run test:jest & npm run test:mocha",
     "npm-check": "npx npm-check -u"
   },
   "repository": {
@@ -55,6 +56,7 @@
     "jsdom-global": "^3.0.2",
     "mocha": "^6.2.2",
     "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0",
     "stylelint": "^11.1.1",
     "stylelint-config-airbnb": "0.0.0",
     "stylelint-order": "^3.1.1",
