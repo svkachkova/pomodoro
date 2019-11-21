@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Form from './form';
-import Task from './task';
-import { TaskItem, Tasks } from './task-list.types';
+import Form from './Form';
+import Task from './Task';
+import { TaskItem, Tasks } from './TaskList.types';
 
 type Props = {};
 type State = {

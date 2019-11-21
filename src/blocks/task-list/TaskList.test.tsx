@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
 
-import Form from './form';
-import Task from './task';
-import TaskList from './task-list'; 
+import Form from './Form';
+import Task from './Task';
+import TaskList from './TaskList'; 
 
 describe('<Form />', () => {
     const taskText = 'Hello world';

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { TaskItem } from './task-list.types';
+import { TaskItem } from './TaskList.types';
 
 type Props = {
     task: TaskItem;
@@ -8,29 +8,25 @@ type Props = {
     remove: (id: number) => void;
 };
 
-type State = {};
+function Task(props: Props) {
+    const { task, checked, remove } = props;
 
-class Task extends Component<Props, State> {
-    render() {
-        const { task, checked, remove } = this.props;
-
-        return (
-            <li className="task-list__task">
-                <label className={'task-list__label' + (task.checked ? ' task-list__label_line-through' : '')}>
-                    <input
-                        className="task-list__checkbox"
-                        type="checkbox"
-                        checked={task.checked}
-                        onChange={() => checked(task.id)}
-                    />
-                    {task.text}
-                </label>
-                <button className="task-list__remove-btn" onClick={() => remove(task.id)}>
-                    &times;
-                </button>
-            </li>
-        );
-    }
+    return (
+        <li className="task-list__task">
+            <label className={'task-list__label' + (task.checked ? ' task-list__label_line-through' : '')}>
+                <input
+                    className="task-list__checkbox"
+                    type="checkbox"
+                    checked={task.checked}
+                    onChange={() => checked(task.id)}
+                />
+                {task.text}
+            </label>
+            <button className="task-list__remove-btn" onClick={() => remove(task.id)}>
+                &times;
+            </button>
+        </li>
+    );
 }
 
 export default Task;

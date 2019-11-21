@@ -1,11 +1,11 @@
 {
-    "files": [
-        "../blocks/timer/timer.ts", 
+    "files": [ 
         "index.ts", 
-        "../blocks/task-list/task-list.tsx",
-        "../blocks/task-list/form.tsx",
-        "../blocks/task-list/task.tsx",
-        "../blocks/task-list/task-list.types.ts"
+        "../blocks/timer/timer.ts",
+        "../blocks/task-list/TaskList.tsx",
+        "../blocks/task-list/Form.tsx",
+        "../blocks/task-list/Task.tsx",
+        "../blocks/task-list/TaskList.types.ts"
     ],
     "compilerOptions": {
         "noImplicitAny": true,
