@@ -1,16 +1,13 @@
 .break-btn {
-    width: 160px;
+    width: 155px;
 
     margin: var(--space-s) var(--space-l);
     padding: var(--space-xs) var(--space-m);
 
     font-size: var(--text-m);
-
     color: var(-color-text-secondary);
 
     cursor: pointer;
-
-    transition: transform 0.2s ease-in;
 
     @include border(2px, 50em);
 
@@ -18,9 +15,8 @@
         margin: var(--space-s) 0;
     }
 
-    &:hover {
-        transform: scale(1.02);
-
+    &:hover,
+    &:active {
         color: var(--color-text-primary);
         border-color: var(--color-bg-accent);
         box-shadow: 0 0 10px var(--color-bg-shadow);

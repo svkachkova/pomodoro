@@ -12,13 +12,13 @@
         font-size: var(--text-xxl);
     }
 
-    &__switch {
+    &__theme-switch {
         align-self: flex-end;
 
-        margin-top: calc(-1 * var(--switch-height));
+        margin-top: calc(-1 * var(--switch-size));
 
-        @media screen and (max-width: 480px) {
-            visibility: hidden;
+        @media screen and (max-width: 375px) {
+            margin-top: 0;
         }
     }
 }

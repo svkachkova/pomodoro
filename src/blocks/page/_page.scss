@@ -36,6 +36,10 @@
         padding: 0 var(--space-xxl);
 
         @extend %margin-auto;
+
+        @media screen and (max-width: 480px) {
+            padding: 0 var(--space-l);
+        }
     }
 
     &__footer {

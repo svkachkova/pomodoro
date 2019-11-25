@@ -32,7 +32,8 @@
             @include w-h(270px);
         }
 
-        &:hover {
+        &:hover,
+        &:active {
             transform: scale(1.02);
             box-shadow: 0 0 20px var(--color-bg-shadow);
         }
@@ -47,8 +48,14 @@
     }
 
     &__control {
+        border: 0;
+
         font-size: var(--text-s);
+        line-height: 1.2;
+        
         color: var(--color-text-secondary);
+
+        cursor: pointer;
 
         @extend %margin-auto;
     }
@@ -66,6 +73,7 @@
 }
 
 .timer:hover .timer_focus,
-.timer_cancel:hover {
+.timer_cancel:hover,
+.timer__control:focus {
     color: var(--color-text-accent);
 }

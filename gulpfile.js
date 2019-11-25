@@ -2,6 +2,7 @@
 
 const dir = {
     src: './src/',
+    public: './public/',
     build: './build/' 
 };
 
@@ -36,8 +37,13 @@ task('compileScripts', () => {
     .pipe(dest(dir.build + 'js/'));
 });
 
+task('copySVG', () => {
+    return src(dir.public + 'img/*.svg')
+    .pipe(dest(dir.build + 'img/'));
+});
+
 task('copyHTML', () => {
-    return src(dir.src + '**/*.{html,ico}')
+    return src(dir.public + '*.{html,ico}')
     .pipe(dest(dir.build));
 });
 
@@ -47,8 +53,9 @@ task('clean', () => {
 
 task('watch', () => {
     watch(dir.src + '**/*.scss', series('compileStyles'));
-    watch(dir.src + '**/*.ts', series('compileScripts'));
-    watch(dir.src + '*.{html,ico}', series('copyHTML'));
+    watch(dir.src + '**/*.{ts,tsx}', series('compileScripts'));
+    watch(dir.public + 'img/*.svg', series('copySVG'));
+    watch(dir.public + '*.{html,ico}', series('copyHTML'));
 });
 
 task('serve', () => {
@@ -58,6 +65,6 @@ task('serve', () => {
 	browserSync.watch(dir.build + '**/*.*').on('change', browserSync.reload);
 });
 
-task('build', series('clean', parallel('compileStyles', 'compileScripts', 'copyHTML')));
+task('build', series('clean', parallel('compileStyles', 'compileScripts', 'copySVG', 'copyHTML')));
 
 task('dev', series('build', parallel('serve', 'watch')));
