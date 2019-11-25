@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Timer from '../blocks/timer/timer';
-import TaskList from '../blocks/task-list/task-list';
+import TaskList from '../blocks/task-list/TaskList';
 
 const Cookies = require('js-cookie');
 
