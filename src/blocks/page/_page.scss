@@ -1,42 +1,47 @@
 .page {
-    @include w-h(100%, 100hv);
-
     font-family: var(--font-primary);
     font-weight: 300;
 
     text-align: center;
     line-height: 1.2;
 
+    @include w-h(100%, 100hv);
+
     @media screen and (max-width: 480px) {
         --text-base: 10px;
     }
 
-    &__header {}
+    &__content {
+        max-width: 768px;
+
+        @extend %margin-auto;
+    }
 
     &__timer {
-        @extend %flex-column;
-        @extend %margin-auto;
-        @extend %user-select;
-    
-        width: 70%;
-        max-width: 1024px;
-    
         padding: 90px 10px 60px;
-    
+
         border-bottom: 1.5px solid var(--color-text-primary);
         border-top: 1.5px solid var(--color-text-primary);
 
+        @extend %flex-column;
+        @extend %margin-auto;
+        @extend %user-select;
+
         @media screen and (max-width: 480px) {
-            width: 100%;
             padding: 50px 10px 30px;
         }
     }
 
     &__task-list {
-        @extend %margin-auto;
         padding: 0 var(--space-xxl);
+
+        @extend %margin-auto;
+
+        @media screen and (max-width: 480px) {
+            padding: 0 var(--space-l);
+        }
     }
-    
+
     &__footer {
         padding: var(--space-xxl) var(--space-s);
     }

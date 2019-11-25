@@ -1,27 +1,117 @@
 .task-list {
-    width: 70%;
-    max-width: 1024px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 
     text-align: start;
 
-    @media screen and (max-width: 480px) {
-        width: 100%;
-        padding-left: var(--space-xxl);
-        padding-right: var(--space-s);
+    &__form {
+        padding: var(--space-l) 0;
     }
 
     &__title {
-        padding: var(--space-l) 0;
+        padding-top: var(--space-l);
 
         font-weight: 400;
         font-size: var(--text-l);
     }
 
-    &__list {}
+    &__list {
+        width: 100%;
+    }
 
     &__task {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
         padding: var(--space-xs) 0;
         font-size: var(--text-s);
-        list-style: circle;
+        list-style: none;
+    }
+
+    &__label {
+        cursor: pointer;
+
+        &_line-through {
+            text-decoration: line-through;
+        }
+    }
+
+    &__checkbox {
+        margin: 0 var(--space-s);
+
+        &:checked {
+            box-shadow: 0 0 1px 1px var(--color-bg-border);
+            // box-shadow: 0 0 2px 1px var(--color-bg-border);
+        }
+    }
+
+    &__remove-btn {
+        flex-shrink: 0;
+
+        margin: 0 var(--space-s);
+        border: 0;
+
+        font-size: var(--text-s);
+        color: var(--color-text-secondary);
+
+        cursor: pointer;
+
+        @include w-h(30px);
+
+        &:hover,
+        &:focus {
+            color: var(--color-text-accent);
+        }
+    }
+}
+
+.form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    width: 100%;
+
+    &__input {
+        min-width: 150px;
+
+        margin: var(--space-xs);
+        padding: var(--space-xs) var(--space-m);
+        border: 1px solid var(--color-text-primary);
+        border-radius: 5px;
+
+        font-size: var(--text-s);
+
+        @media screen and (min-width: 480px) {
+            width: 50%;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: var(--color-bg-border);
+        }
+    }
+
+    &__submit {
+        width: 155px;
+
+        margin: var(--space-xs);
+        padding: var(--space-xs) var(--space-m);
+
+        font-size: var(--text-s);
+        color: var(--color-text-secondary);
+
+        cursor: pointer;
+
+        @include border(2px, 50em);
+
+        &:hover,
+        &:active {
+            color: var(--color-text-primary);
+            border-color: var(--color-bg-accent);
+            box-shadow: 0 0 10px var(--color-bg-shadow);
+        }
     }
 }

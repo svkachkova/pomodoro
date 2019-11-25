@@ -1,15 +1,16 @@
 .timer {
-    @extend %flex-column;
     justify-content: center;
     align-self: center;
-
-    @include w-h(300px);
-    @include border(0px, 50%);
     padding: var(--space-s);
 
     font-family: var(--font-timer);
 
     cursor: pointer;
+
+    @extend %flex-column;
+
+    @include w-h(300px);
+    @include border(0, 50%);
 
     @media screen and (max-width: 480px) {
         @include w-h(270px);
@@ -18,37 +19,45 @@
     &__border {
         align-self: center;
         box-sizing: content-box;
-    
-        @include w-h(300px);
-        @include border(0px, 50%);
-        @include gradient(var(--color-gradient-dark), var(--color-gradient-light));
-    
+
         padding: var(--space-xs);
 
-        transition: transform .25s ease-in;
+        transition: transform 0.25s ease-in;
+
+        @include w-h(300px);
+        @include border(0, 50%);
+        @include gradient(var(--color-gradient-dark), var(--color-gradient-light));
 
         @media screen and (max-width: 480px) {
             @include w-h(270px);
         }
 
-        &:hover {
+        &:hover,
+        &:active {
             transform: scale(1.02);
             box-shadow: 0 0 20px var(--color-bg-shadow);
         }
     }
 
     &__time {
-        @extend %margin-auto;
         padding-bottom: var(--space-s);
-    
+
         font-size: var(--text-xl);
+
+        @extend %margin-auto;
     }
 
     &__control {
-        @extend %margin-auto;
-    
+        border: 0;
+
         font-size: var(--text-s);
+        line-height: 1.2;
+        
         color: var(--color-text-secondary);
+
+        cursor: pointer;
+
+        @extend %margin-auto;
     }
 
     &__break-btn {
@@ -64,6 +73,7 @@
 }
 
 .timer:hover .timer_focus,
-.timer_cancel:hover {
+.timer_cancel:hover,
+.timer__control:focus {
     color: var(--color-text-accent);
 }

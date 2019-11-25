@@ -1,0 +1,34 @@
+{
+    "extends": "stylelint-config-airbnb",
+    "plugins": [
+        "stylelint-order",
+        "stylelint-scss",
+        "stylelint-selector-bem-pattern"
+    ],
+    "rules": {
+        "at-rule-empty-line-before": [ "always", {
+            "ignore": ["blockless-after-same-name-blockless", "first-nested"]
+        }],
+        "color-hex-case": "lower",
+        "color-hex-length": "long",
+        "color-no-invalid-hex": true,
+        "declaration-block-no-duplicate-properties": true,
+        "declaration-no-important": true,
+        "function-comma-space-after": "always-single-line",
+        "function-comma-space-before": "never",
+        "indentation": 4,
+        "length-zero-no-unit": true,
+        "no-duplicate-selectors": true,
+        "number-leading-zero": "always",
+        "plugin/selector-bem-pattern": {
+            "componentName": "[-a-z]+",
+            "componentSelectors": {
+              "initial": "^\\.{componentName}(?:[-_a-z]+)?$",
+              "combined": "^.+$"
+            }
+        },
+        "scss/no-dollar-variables": true,
+        "string-quotes": "single",
+        "value-list-comma-space-after": "always-single-line"
+    }
+}

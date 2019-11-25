@@ -1,77 +1,11 @@
 :root {
-    // style
-    --switch-width: 50px;
-    --switch-height: 25px;
-    --switch-padding: 3px;
-  
-    // animation
-    --switch-animation-duration: 0.2s;
-  }
-  
-  .switch {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    align-self: flex-end;
+    --switch-size: 25px;
+}
 
-    position: relative;
+.theme-switch {
+    border: 0;
 
-    @include w-h(var(--switch-width), var(--switch-height));
-    @include border(0px, 50em);
-
-    margin-top: calc(-1 * var(--switch-height));
-    margin-right: var(--switch-height); 
-    padding: var(--switch-padding) 0;
-
-    @media screen and (max-width: 480px) {
-      margin: 0;
-    }
-
-    &__input,
-    &__label {
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    &__input {
-        @include w-h(0);
-        opacity: 0;
-        pointer-events: none;
-      
-        &:checked + .switch__label {
-          background-color: var(--color-bg-accent);
-        }
-      
-        &:checked + .switch__label + .switch__marker {
-          left: calc(100% - var(--switch-height) + var(--switch-padding));
-        }
-    } 
+    cursor: pointer;
     
-    &__label {
-        @include w-h(100%);
-        @include border(0px, inherit);
-
-        z-index: 1;
-        background-color: var(--color-bg-light);
-        
-        transition: background-color var(--switch-animation-duration);
-    }
-
-    &__marker {
-        position: relative;
-        left: var(--switch-padding);
-        z-index: 2;
-
-        @include w-h(calc(var(--switch-height) - var(--switch-padding) * 2));
-        @include border(0px, 50%);
-
-        pointer-events: none;
-
-        background-color: var(--color-bg-point);
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-
-        transition: left var(--switch-animation-duration);
-        will-change: left;
-    }
-  }
+    @include w-h(var(--switch-size));
+}

@@ -1,5 +1,4 @@
 .footer {
-    width: 100%;
 
     &__autor {
         font-size: var(--text-xs);
@@ -8,11 +7,11 @@
 
     &__link {
         text-decoration: none;
-
         color: var(--color-text-link);
 
-        &:hover {
-            color: var(--color-text-accent);
+        &:hover,
+        &:active {
+            text-decoration: underline;
         }
     }
 }
