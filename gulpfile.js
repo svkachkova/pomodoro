@@ -48,7 +48,7 @@ task('copyFonts', () => {
 });
 
 task('copyHTML', () => {
-    return src(dir.public + '*.{html,ico}')
+    return src(dir.public + '*.{html,png}')
     .pipe(dest(dir.build));
 });
 
@@ -61,7 +61,7 @@ task('watch', () => {
     watch(dir.src + '**/*.{ts,tsx}', series('compileScripts'));
     watch(dir.public + 'img/*.svg', series('copySVG'));
     watch(dir.public + 'fonts/*.{woff2,woff}', series('copyFonts'));
-    watch(dir.public + '*.{html,ico}', series('copyHTML'));
+    watch(dir.public + '*.{html,png}', series('copyHTML'));
 });
 
 task('serve', () => {
