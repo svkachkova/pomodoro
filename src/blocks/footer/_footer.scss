@@ -6,12 +6,15 @@
     }
 
     &__link {
-        text-decoration: none;
+        cursor: pointer;
+        touch-action: manipulation;
+
+        text-decoration-skip-ink: auto;
+        text-underline-offset: 2px;
         color: var(--color-text-link);
 
-        &:hover,
-        &:active {
-            text-decoration: underline;
+        &:hover {
+            text-decoration: none;
         }
     }
 }
