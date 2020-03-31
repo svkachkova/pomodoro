@@ -29,33 +29,36 @@ button {
 }
 
 /* rubik-300 */
+
 @font-face {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 300;
     font-display: swap;
     src: url('../fonts/rubik-v9-latin_cyrillic-300.woff2') format('woff2'),
-         url('../fonts/rubik-v9-latin_cyrillic-300.woff') format('woff');
+        url('../fonts/rubik-v9-latin_cyrillic-300.woff') format('woff');
 
 }
   
 /* rubik-regular */
- @font-face {
+
+@font-face {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url('../fonts/rubik-v9-latin_cyrillic-regular.woff2') format('woff2'),
-         url('../fonts/rubik-v9-latin_cyrillic-regular.woff') format('woff');
+        url('../fonts/rubik-v9-latin_cyrillic-regular.woff') format('woff');
 }
 
 /* roboto-mono-300 - latin */
+
 @font-face {
     font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 300;
     font-display: swap;
     src: url('../fonts/roboto-mono-v7-latin-300.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v7-latin-300.woff') format('woff');
+        url('../fonts/roboto-mono-v7-latin-300.woff') format('woff');
 }
   

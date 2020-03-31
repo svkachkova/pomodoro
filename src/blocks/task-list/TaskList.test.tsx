@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import Form from './Form';
 import Task from './Task';
-import TaskList from './TaskList'; 
+import TaskList from './TaskList';
 
 describe('<Form />', () => {
     const taskText = 'Hello world';
@@ -28,7 +28,7 @@ describe('<Form />', () => {
         expect(form.find('.form__input').prop('value')).toBe('');
 
         expect(onSubmit).toHaveBeenCalledTimes(1);
-        expect(onSubmit).toHaveBeenCalledWith(taskText);        
+        expect(onSubmit).toHaveBeenCalledWith(taskText);
     });
 });
 
@@ -47,7 +47,7 @@ describe('<TaskList />', () => {
         'Focus for 25 minutes',
         'Break for 5 minutes',
         'Every three cycles, break for 15 minutes',
-        'Hello world'
+        'Hello world',
     ];
     const taskList = mount(<TaskList />);
 
@@ -57,7 +57,7 @@ describe('<TaskList />', () => {
 
         expect(taskList.find('.task-list__task')).toHaveLength(4);
 
-        labels.forEach(label => {
+        labels.forEach((label) => {
             expect(taskList.find('.task-list__list').text()).toMatch(label);
         });
     });
@@ -74,7 +74,7 @@ describe('<TaskList />', () => {
         expect(taskList.find('.task-list__task')).toHaveLength(3);
 
         labels.pop();
-        labels.forEach(label => {
+        labels.forEach((label) => {
             expect(taskList.find('.task-list__list').text()).toMatch(label);
         });
     });

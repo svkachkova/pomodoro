@@ -17,7 +17,7 @@ function createTimer(): Element[] {
 }
 
 function timeout(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 describe('timer', () => {
@@ -77,7 +77,7 @@ describe('timer', () => {
     });
 
     describe('focus', () => {
-        const [timerElem, timeElem, controlElem]: Element[] = createTimer();
+        const [timerElem, timeElem]: Element[] = createTimer();
         const timer: Timer = new Timer(timerElem);
 
         timer.start(25);
@@ -91,7 +91,7 @@ describe('timer', () => {
 
     describe('break', () => {
         describe('short', () => {
-            const [timerElem, timeElem, controlElem]: Element[] = createTimer();
+            const [timerElem, timeElem]: Element[] = createTimer();
             const timer: Timer = new Timer(timerElem);
 
             timer.start(5);
@@ -104,7 +104,7 @@ describe('timer', () => {
         });
 
         describe('long', () => {
-            const [timerElem, timeElem, controlElem]: Element[] = createTimer();
+            const [timerElem, timeElem]: Element[] = createTimer();
             const timer: Timer = new Timer(timerElem);
 
             timer.start(15);

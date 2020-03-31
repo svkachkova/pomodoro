@@ -2,7 +2,9 @@
     "files": [ 
         "index.ts", 
         "../blocks/timer/timer.ts",
+        "../blocks/timer/timer.test.ts",
         "../blocks/task-list/TaskList.tsx",
+        "../blocks/task-list/TaskList.test.tsx",
         "../blocks/task-list/Form.tsx",
         "../blocks/task-list/Task.tsx",
         "../blocks/task-list/TaskList.types.ts"
