@@ -16,7 +16,7 @@ function createTimer(): Element[] {
     return [timerElement, timerTimeElement, timerControlElement];
 }
 
-function timeout(ms) {
+function timeout(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
