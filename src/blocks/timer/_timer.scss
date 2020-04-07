@@ -1,6 +1,8 @@
 .timer {
     justify-content: center;
     align-self: center;
+    
+    border-radius: 50%;
     padding: var(--space-s);
 
     font-family: var(--font-timer);
@@ -10,7 +12,6 @@
     @extend %flex-column;
 
     @include w-h(300px);
-    @include border(0, 50%);
 
     @media screen and (max-width: 480px) {
         @include w-h(270px);
@@ -20,13 +21,12 @@
         align-self: center;
         box-sizing: content-box;
 
+        border-radius: 50%;
         padding: var(--space-xs);
 
-        transition: transform 0.25s ease-in;
+        background-color: var(--color-accent);
 
         @include w-h(300px);
-        @include border(0, 50%);
-        @include gradient(var(--color-gradient-dark), var(--color-gradient-light));
 
         @media screen and (max-width: 480px) {
             @include w-h(270px);
@@ -34,8 +34,8 @@
 
         &:hover,
         &:active {
-            transform: scale(1.02);
-            box-shadow: 0 0 20px var(--color-bg-shadow);
+            box-shadow: 0 0 15px var(--color-bg-shadow);
+            background-color: var(--color-accent-hover);
         }
     }
 
@@ -75,5 +75,5 @@
 .timer:hover .timer_focus,
 .timer_cancel:hover,
 .timer__control:focus {
-    color: var(--color-text-accent);
+    color: var(--color-accent-hover);
 }

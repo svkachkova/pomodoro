@@ -1,5 +1,5 @@
 .footer {
-
+    
     &__autor {
         font-size: var(--text-xs);
         color: var(--color-text-secondary);
@@ -11,10 +11,10 @@
 
         text-decoration-skip-ink: auto;
         text-underline-offset: 2px;
-        color: var(--color-text-link);
+        color: var(--color-accent);
 
         &:hover {
-            text-decoration: none;
+            color: var(--color-accent-hover);
         }
     }
 }
