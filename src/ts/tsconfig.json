@@ -1,6 +1,6 @@
 {
-    "files": [ 
-        "index.ts", 
+    "files": [
+        "index.ts",
         "../blocks/timer/timer.ts",
         "../blocks/timer/timer.test.ts",
         "../blocks/task-list/TaskList.tsx",
@@ -18,9 +18,7 @@
         "target": "es5",
         "module": "es6",
         "sourceMap": true,
-        "lib": [
-            "dom", "es2015"
-        ],
+        "lib": ["dom", "es2015"],
         "jsx": "react"
     }
 }
