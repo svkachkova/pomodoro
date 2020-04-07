@@ -4,21 +4,17 @@
     --font-timer: 'Roboto Mono', monospace;
 
     // font size
-    --text-base: 12px;
-
-    --text-xs: calc(1.5 * var(--text-base));
-    --text-s: calc(1.8 * var(--text-base));
-    --text-m: calc(2 * var(--text-base));
-    --text-l: calc(3 * var(--text-base));
-    --text-xl: calc(5 * var(--text-base));
+    --text-xs: 1rem;
+    --text-s: 1.25rem;
+    --text-m: 2.5rem;
+    --text-l: 3.75rem;
 
     // space
-    --space-xs: 5px;
-    --space-s: 10px;
-    --space-m: 15px;
-    --space-l: 20px;
-    --space-xl: 30px;
-    --space-xxl: 50px;
+    --space-xs: 0.5rem;
+    --space-s: 1rem;
+    --space-m: 1.25rem;
+    --space-l: 2rem;
+    --space-xl: 3rem;
 
     // color
     --color-accent: #8776ef;

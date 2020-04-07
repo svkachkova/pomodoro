@@ -3,7 +3,7 @@
     align-self: center;
 
     border-radius: 50%;
-    padding: var(--space-s);
+    padding: var(--space-xs);
 
     font-family: var(--font-timer);
 
@@ -22,7 +22,7 @@
         box-sizing: content-box;
 
         border-radius: 50%;
-        padding: var(--space-xs);
+        padding: 5px;
 
         background-color: var(--color-accent);
 
@@ -40,9 +40,9 @@
     }
 
     &__time {
-        padding-bottom: var(--space-s);
+        padding-bottom: var(--space-xs);
 
-        font-size: var(--text-xl);
+        font-size: var(--text-l);
 
         @extend %margin-auto;
     }
@@ -51,8 +51,6 @@
         border: 0;
 
         font-size: var(--text-s);
-        line-height: 1.2;
-
         color: var(--color-text-secondary);
 
         cursor: pointer;
@@ -62,12 +60,12 @@
 
     &__break-btn {
         align-self: center;
-        margin-top: var(--space-xxl);
+        margin-top: var(--space-xl);
 
         @media screen and (max-width: 480px) {
             display: flex;
             flex-flow: column wrap;
-            margin-top: var(--space-xl);
+            margin-top: var(--space-l);
         }
     }
 }

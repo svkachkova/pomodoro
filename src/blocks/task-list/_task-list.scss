@@ -6,14 +6,14 @@
     text-align: start;
 
     &__form {
-        padding: var(--space-l) 0;
+        padding: var(--space-m) 0;
     }
 
     &__title {
-        padding-top: var(--space-l);
+        padding-top: var(--space-m);
 
         font-weight: 400;
-        font-size: var(--text-l);
+        font-size: var(--text-m);
     }
 
     &__list {
@@ -25,7 +25,7 @@
         flex-flow: row nowrap;
         justify-content: space-between;
 
-        padding: var(--space-xs) 0;
+        padding-block-start: var(--space-xs);
         font-size: var(--text-s);
         list-style: none;
     }
@@ -43,13 +43,13 @@
     }
 
     &__checkbox {
-        margin: 0 var(--space-s);
+        margin: 0 var(--space-xs);
     }
 
     &__remove-btn {
         flex-shrink: 0;
 
-        margin: 0 var(--space-s);
+        margin: 0 var(--space-xs);
 
         border: 0;
         border-radius: 50%;
@@ -78,10 +78,10 @@
     &__input {
         min-width: 150px;
 
-        margin: var(--space-xs);
-        padding: var(--space-xs) var(--space-m);
+        margin: 0 var(--space-xs);
+        padding: var(--space-xs) var(--space-s);
 
-        border: 2px solid var(--color-text-secondary);
+        border: 1.5px solid var(--color-text-secondary);
         border-radius: 5px;
 
         font-size: var(--text-s);
@@ -104,18 +104,24 @@
     &__submit {
         width: 155px;
 
-        margin: var(--space-xs);
-        padding: var(--space-xs) var(--space-m);
+        margin: 0 var(--space-xs);
+        padding: var(--space-xs) 0;
 
         border-width: 0;
         border-radius: 25em;
 
+        font-weight: 400;
         font-size: var(--text-s);
+
         color: var(--color-bg-default);
 
         cursor: pointer;
 
         background-color: var(--color-accent);
+
+        @media screen and (max-width: 480px) {
+            margin-block-start: var(--space-s);
+        }
 
         &:hover,
         &:active {

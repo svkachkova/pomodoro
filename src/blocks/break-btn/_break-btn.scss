@@ -1,13 +1,14 @@
 .break-btn {
     width: 160px;
 
-    margin: var(--space-s) var(--space-l);
-    padding: var(--space-xs) var(--space-m);
+    margin: 0 var(--space-m);
+    padding: var(--space-xs) 0;
 
     border-width: 0;
     border-radius: 25em;
 
-    font-size: var(--text-m);
+    font-weight: 400;
+    font-size: var(--text-s);
 
     color: var(--color-bg-default);
     background-color: var(--color-accent);
@@ -15,7 +16,7 @@
     cursor: pointer;
 
     @media screen and (max-width: 480px) {
-        margin: var(--space-s) 0;
+        margin: var(--space-xs) 0;
     }
 
     &:hover,
