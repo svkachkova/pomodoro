@@ -4,44 +4,36 @@
     --font-timer: 'Roboto Mono', monospace;
 
     // font size
-    --text-base: 12px;
-
-    --text-xs: calc(1.5 * var(--text-base));
-    --text-s: calc(1.8 * var(--text-base));
-    --text-m: calc(2 * var(--text-base));
-    --text-l: calc(3 * var(--text-base));
-    --text-xl: calc(5 * var(--text-base));
-    --text-xxl: calc(6 * var(--text-base));
+    --text-xs: 1rem;
+    --text-s: 1.25rem;
+    --text-m: 2.5rem;
+    --text-l: 3.75rem;
 
     // space
-    --space-xs: 5px;
-    --space-s: 10px;
-    --space-m: 15px;
-    --space-l: 20px;
-    --space-xl: 30px;
-    --space-xxl: 50px;
+    --space-xs: 0.5rem;
+    --space-s: 1rem;
+    --space-m: 1.25rem;
+    --space-l: 2rem;
+    --space-xl: 3rem;
 
     // color
-    --color-text-primary: #eeeeee;
-    --color-text-secondary: #bbbbbb;
-    --color-text-accent: #80aeff;
-    --color-text-link: #669dff;
+    --color-accent: #8776ef;
+    --color-accent-hover: #a295f3;
 
-    --color-bg-default: #202030;
-    --color-bg-light: #404050;
-    --color-bg-shadow: #404050;
-    --color-bg-border: #669dff;
-    --color-bg-accent: #80aeff;
-    --color-bg-point: #eeeeee;
+    --color-text-primary: #f1f6fb;
+    --color-text-secondary: #d4dade;
 
-    --color-gradient-light: #8373e5;
-    --color-gradient-dark: #3993e5;
+    --color-bg-default: #1a2026;
+    --color-bg-shadow: #2f3640;
 }
 
 .theme_light {
-    --color-text-primary: #333333;
-    --color-text-secondary: #555555;
+    --color-accent: #6851f0;
+    --color-accent-hover: #503eb6;
 
-    --color-bg-default: #f7f8f9;
-    --color-bg-shadow: #7070aa;
+    --color-text-primary: #1a2026;
+    --color-text-secondary: #2f3640;
+
+    --color-bg-default: #f1f6fb;
+    --color-bg-shadow: #d4dade;
 }

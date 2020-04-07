@@ -1,24 +1,26 @@
 .break-btn {
     width: 160px;
 
-    margin: var(--space-s) var(--space-l);
-    padding: var(--space-xs) var(--space-m);
+    margin: 0 var(--space-m);
+    padding: var(--space-xs) 0;
 
-    font-size: var(--text-m);
-    color: var(-color-text-secondary);
+    border-width: 0;
+    border-radius: 25em;
+
+    font-weight: 400;
+    font-size: var(--text-s);
+
+    color: var(--color-bg-default);
+    background-color: var(--color-accent);
 
     cursor: pointer;
 
-    @include border(2px, 50em);
-
     @media screen and (max-width: 480px) {
-        margin: var(--space-s) 0;
+        margin: var(--space-xs) 0;
     }
 
     &:hover,
     &:active {
-        color: var(--color-text-primary);
-        border-color: var(--color-bg-accent);
-        box-shadow: 0 0 10px var(--color-bg-shadow);
+        background-color: var(--color-accent-hover);
     }
 }

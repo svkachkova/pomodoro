@@ -18,7 +18,7 @@
     }
 
     &__timer {
-        padding: 90px 10px 60px;
+        padding: 80px 10px 60px;
 
         border-bottom: 1.5px solid var(--color-text-primary);
         border-top: 1.5px solid var(--color-text-primary);
@@ -33,7 +33,7 @@
     }
 
     &__task-list {
-        padding: 0 var(--space-xxl);
+        padding: 0 var(--space-xl);
 
         @extend %margin-auto;
 
@@ -43,6 +43,6 @@
     }
 
     &__footer {
-        padding: var(--space-xxl) var(--space-s);
+        padding: var(--space-xl) var(--space-xs);
     }
 }

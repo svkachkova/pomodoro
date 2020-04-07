@@ -1,15 +1,15 @@
 .header {
-    padding: var(--space-l) var(--space-s);
+    padding: var(--space-m) var(--space-xs);
 
     @extend %flex-column;
 
     @media screen and (max-width: 480px) {
-        padding: var(--space-s);
+        padding: var(--space-xs);
     }
 
     &__title {
         font-weight: 400;
-        font-size: var(--text-xxl);
+        font-size: var(--text-l);
     }
 
     &__theme-switch {

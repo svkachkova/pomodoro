@@ -6,14 +6,14 @@
     text-align: start;
 
     &__form {
-        padding: var(--space-l) 0;
+        padding: var(--space-m) 0;
     }
 
     &__title {
-        padding-top: var(--space-l);
+        padding-top: var(--space-m);
 
         font-weight: 400;
-        font-size: var(--text-l);
+        font-size: var(--text-m);
     }
 
     &__list {
@@ -25,7 +25,7 @@
         flex-flow: row nowrap;
         justify-content: space-between;
 
-        padding: var(--space-xs) 0;
+        padding-block-start: var(--space-xs);
         font-size: var(--text-s);
         list-style: none;
     }
@@ -36,25 +36,26 @@
         &_line-through {
             text-decoration: line-through;
         }
+
+        &:hover {
+            background-color: var(--color-bg-shadow);
+        }
     }
 
     &__checkbox {
-        margin: 0 var(--space-s);
-
-        &:checked {
-            box-shadow: 0 0 1px 1px var(--color-bg-border);
-            // box-shadow: 0 0 2px 1px var(--color-bg-border);
-        }
+        margin: 0 var(--space-xs);
     }
 
     &__remove-btn {
         flex-shrink: 0;
 
-        margin: 0 var(--space-s);
+        margin: 0 var(--space-xs);
+
         border: 0;
+        border-radius: 50%;
 
         font-size: var(--text-s);
-        color: var(--color-text-secondary);
+        color: var(--color-accent);
 
         cursor: pointer;
 
@@ -62,7 +63,7 @@
 
         &:hover,
         &:focus {
-            color: var(--color-text-accent);
+            background-color: var(--color-bg-shadow);
         }
     }
 }
@@ -77,9 +78,10 @@
     &__input {
         min-width: 150px;
 
-        margin: var(--space-xs);
-        padding: var(--space-xs) var(--space-m);
-        border: 1px solid var(--color-text-primary);
+        margin: 0 var(--space-xs);
+        padding: var(--space-xs) var(--space-s);
+
+        border: 1.5px solid var(--color-text-secondary);
         border-radius: 5px;
 
         font-size: var(--text-s);
@@ -88,30 +90,42 @@
             width: 50%;
         }
 
+        &::placeholder {
+            color: var(--color-text-secondary);
+            opacity: 0.8;
+        }
+
         &:hover,
         &:focus {
-            border-color: var(--color-bg-border);
+            border-color: var(--color-accent);
         }
     }
 
     &__submit {
         width: 155px;
 
-        margin: var(--space-xs);
-        padding: var(--space-xs) var(--space-m);
+        margin: 0 var(--space-xs);
+        padding: var(--space-xs) 0;
 
+        border-width: 0;
+        border-radius: 25em;
+
+        font-weight: 400;
         font-size: var(--text-s);
-        color: var(--color-text-secondary);
+
+        color: var(--color-bg-default);
 
         cursor: pointer;
 
-        @include border(2px, 50em);
+        background-color: var(--color-accent);
+
+        @media screen and (max-width: 480px) {
+            margin-block-start: var(--space-s);
+        }
 
         &:hover,
         &:active {
-            color: var(--color-text-primary);
-            border-color: var(--color-bg-accent);
-            box-shadow: 0 0 10px var(--color-bg-shadow);
+            background-color: var(--color-accent-hover);
         }
     }
 }

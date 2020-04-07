@@ -1,7 +1,9 @@
 .timer {
     justify-content: center;
     align-self: center;
-    padding: var(--space-s);
+
+    border-radius: 50%;
+    padding: var(--space-xs);
 
     font-family: var(--font-timer);
 
@@ -10,7 +12,6 @@
     @extend %flex-column;
 
     @include w-h(300px);
-    @include border(0, 50%);
 
     @media screen and (max-width: 480px) {
         @include w-h(270px);
@@ -20,13 +21,12 @@
         align-self: center;
         box-sizing: content-box;
 
-        padding: var(--space-xs);
+        border-radius: 50%;
+        padding: 5px;
 
-        transition: transform 0.25s ease-in;
+        background-color: var(--color-accent);
 
         @include w-h(300px);
-        @include border(0, 50%);
-        @include gradient(var(--color-gradient-dark), var(--color-gradient-light));
 
         @media screen and (max-width: 480px) {
             @include w-h(270px);
@@ -34,15 +34,15 @@
 
         &:hover,
         &:active {
-            transform: scale(1.02);
-            box-shadow: 0 0 20px var(--color-bg-shadow);
+            box-shadow: 0 0 15px var(--color-bg-shadow);
+            background-color: var(--color-accent-hover);
         }
     }
 
     &__time {
-        padding-bottom: var(--space-s);
+        padding-bottom: var(--space-xs);
 
-        font-size: var(--text-xl);
+        font-size: var(--text-l);
 
         @extend %margin-auto;
     }
@@ -51,8 +51,6 @@
         border: 0;
 
         font-size: var(--text-s);
-        line-height: 1.2;
-        
         color: var(--color-text-secondary);
 
         cursor: pointer;
@@ -62,12 +60,12 @@
 
     &__break-btn {
         align-self: center;
-        margin-top: var(--space-xxl);
+        margin-top: var(--space-xl);
 
         @media screen and (max-width: 480px) {
             display: flex;
             flex-flow: column wrap;
-            margin-top: var(--space-xl);
+            margin-top: var(--space-l);
         }
     }
 }
@@ -75,5 +73,5 @@
 .timer:hover .timer_focus,
 .timer_cancel:hover,
 .timer__control:focus {
-    color: var(--color-text-accent);
+    color: var(--color-accent-hover);
 }
