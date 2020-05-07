@@ -2,6 +2,7 @@
     justify-content: center;
     align-self: center;
 
+    border: 5px solid var(--color-accent);
     border-radius: 50%;
     padding: var(--space-xs);
 
@@ -17,26 +18,10 @@
         @include w-h(270px);
     }
 
-    &__border {
-        align-self: center;
-        box-sizing: content-box;
-
-        border-radius: 50%;
-        padding: 5px;
-
-        background-color: var(--color-accent);
-
-        @include w-h(300px);
-
-        @media screen and (max-width: 480px) {
-            @include w-h(270px);
-        }
-
-        &:hover,
-        &:active {
-            box-shadow: 0 0 15px var(--color-bg-shadow);
-            background-color: var(--color-accent-hover);
-        }
+    &:hover,
+    &:active {
+        box-shadow: 0 0 15px var(--color-bg-shadow);
+        border-color: var(--color-accent-hover);
     }
 
     &__time {
