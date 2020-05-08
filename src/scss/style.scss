@@ -28,6 +28,10 @@ button {
     font: inherit;
 }
 
+button {
+    user-select: none;
+}
+
 /* rubik-300 */
 
 @font-face {
