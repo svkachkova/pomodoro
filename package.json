@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gulp build",
     "dev": "gulp dev",
+    "deploy-ghpages": "gh-pages -d build",
     "fix:scss": "stylelint --fix src/**/*.scss",
     "fix:ts": "eslint --fix src/**/*.{ts,tsx}",
     "fix": "npm run fix:scss && npm run fix:ts && prettier --write src/**/*.*",
@@ -47,6 +48,7 @@
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
+    "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-plumber": "^1.2.1",
