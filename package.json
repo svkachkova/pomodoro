@@ -52,9 +52,11 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
+    "husky": "^4.2.5",
     "jest": "^25.2.4",
     "jsdom": "^16.2.2",
     "jsdom-global": "^3.0.2",
+    "lint-staged": "^10.2.6",
     "mocha": "^7.1.1",
     "prettier": "^2.0.2",
     "react-test-renderer": "^16.13.1",
@@ -73,5 +75,15 @@
     "js-cookie": "^2.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": "eslint --cache --fix",
+    "src/**/*.scss": "stylelint --fix",
+    "src/**/*.*": "prettier --write"
   }
 }
