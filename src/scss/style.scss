@@ -19,7 +19,12 @@
     background: var(--color-bg-default);
 
     &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
         outline: 3px dotted var(--color-text-primary);
+        outline-offset: 1px;
     }
 }
 
