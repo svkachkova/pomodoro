@@ -19,13 +19,22 @@
     background: var(--color-bg-default);
 
     &:focus {
+        outline: none;
+    }
+
+    &:focus-visible {
         outline: 3px dotted var(--color-text-primary);
+        outline-offset: 1px;
     }
 }
 
 input,
 button {
     font: inherit;
+}
+
+button {
+    user-select: none;
 }
 
 /* rubik-300 */
